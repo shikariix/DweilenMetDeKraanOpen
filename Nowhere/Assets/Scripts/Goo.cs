@@ -5,20 +5,21 @@ using UnityEngine;
 public class Goo : MonoBehaviour {
 
     public float level;
-
     private Vector3 tempPos;
+    public SceneController scene;
     
     void Update() {
         tempPos = transform.position;
-        tempPos.y = level;
+        tempPos.y = level / 3;
         transform.position = tempPos;
 
         if (level < 0) {
             level = 0;
         }
 
-        if (level > 1.5f) {
+        if (level > 3.5f) {
             Debug.Log("You died");
+            scene.GameOver();
         }
     }
 }

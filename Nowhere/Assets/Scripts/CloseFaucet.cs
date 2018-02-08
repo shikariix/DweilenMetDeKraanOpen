@@ -7,13 +7,16 @@ public class CloseFaucet : MonoBehaviour {
 
     public List<string> neededNums;
 
-    private List<Faucet> faucets = new List<Faucet>();
+    public List<Faucet> openFaucets = new List<Faucet>();
+    GameObject[] faucetobjs;
 
     void Awake() {
-        GameObject[] faucetobjs = GameObject.FindGameObjectsWithTag("Faucet");
+        faucetobjs = GameObject.FindGameObjectsWithTag("Faucet");
         foreach (GameObject obj in faucetobjs) {
             Faucet temp = obj.GetComponent<Faucet>();
-            faucets.Add(temp);
+            if (temp.isOpen) { 
+                openFaucets.Add(temp);
+            }
         }
         GenerateNumbers();
     }
@@ -21,7 +24,15 @@ public class CloseFaucet : MonoBehaviour {
     void Update() {
         if (neededNums.Contains(Input.inputString)) {
             Debug.Log("Got it!");
+            neededNums.Remove(Input.inputString);
         }
+
+        if (neededNums.Count < 1) {
+            openFaucets[0].CloseFaucet();
+            GenerateNumbers();
+        }
+
+        UpdateFaucets();
     }
     
     void GenerateNumbers() {
@@ -32,11 +43,16 @@ public class CloseFaucet : MonoBehaviour {
         for (int i = 0; i < amount; i++) {
             int c = Random.Range (0,10);
             neededNums.Add(c.ToString());
-            Debug.Log(neededNums[i]);
         }
     }
 
-    void CloseThatBinch(Faucet f) {
-        f.isOpen = false;
+    void UpdateFaucets() {
+        openFaucets.Clear();
+        foreach (GameObject obj in faucetobjs) {
+            Faucet temp = obj.GetComponent<Faucet>();
+            if (temp.isOpen) {
+                openFaucets.Add(temp);
+            }
+        }
     }
 }
