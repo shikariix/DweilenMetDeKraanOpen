@@ -12,5 +12,13 @@ public class Goo : MonoBehaviour {
         tempPos = transform.position;
         tempPos.y = level;
         transform.position = tempPos;
+
+        if (level < 0) {
+            level = 0;
+        }
+
+        if (level > 1.5f) {
+            Debug.Log("You died");
+        }
     }
 }

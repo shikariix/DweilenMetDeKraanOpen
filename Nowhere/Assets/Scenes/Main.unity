@@ -175,7 +175,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d53f604beb6c42c4091bf050029b9b14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 1491589488}
   - component: {fileID: 1491589487}
   - component: {fileID: 1491589486}
+  - component: {fileID: 1491589489}
   m_Layer: 0
   m_Name: Mop
   m_TagString: Untagged
@@ -605,6 +606,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1491589489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491589485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a243ef5eed4555f42bc5322d966562f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neededNums: []
 --- !u!1 &2146238251
 GameObject:
   m_ObjectHideFlags: 0

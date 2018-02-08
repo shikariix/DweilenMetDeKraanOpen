@@ -15,7 +15,7 @@ public class Faucet : MonoBehaviour {
         }
 
         if (isOpen) {
-            goo.level += 0.001f;
+            goo.level += 0.0005f;
         }
     }
 
