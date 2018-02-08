@@ -10,6 +10,9 @@ public class Mop : MonoBehaviour {
     private int correctButtons;
     public List<GameObject> keys;
 
+    public Animator anim;
+    public AudioSource aud;
+
     void Start() {
         GenerateKeys();
     }
@@ -57,16 +60,18 @@ public class Mop : MonoBehaviour {
         }
 
         if (correctButtons == neededKeys.Count) {
+            anim.SetBool("isMopping", true);
             DoMopping();
         }
         correctButtons = 0;
     }
 
     void DoMopping() {
-        Debug.Log("Correct keys!");
         goo.level -= 0.4f;
         heldKeys.Clear();
         GenerateKeys();
+        aud.Play();
+        StartCoroutine("move");
     }
 
     void GenerateKeys() {
@@ -85,11 +90,10 @@ public class Mop : MonoBehaviour {
 
             //avoid double chars
             bool included = false;
-            for (int j = 0; j < neededKeys.Count; j++) {
-                if (c.ToString() == neededKeys[j]) {
+            foreach(string s in neededKeys) {
+                
+                if (c.ToString() == s) {
                    included = true;
-                } else {
-                   included = false;
                 }
             }
 
@@ -110,5 +114,11 @@ public class Mop : MonoBehaviour {
 
             keys[i].name = neededKeys[i];
         }
+    }
+
+    IEnumerator move() {
+        yield return new WaitForSeconds(1);
+
+        anim.SetBool("isMopping", false);
     }
 }

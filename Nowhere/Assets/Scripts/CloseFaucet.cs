@@ -31,7 +31,6 @@ public class CloseFaucet : MonoBehaviour {
             openFaucets[0].CloseFaucet();
             GenerateNumbers();
         }
-
         UpdateFaucets();
     }
     

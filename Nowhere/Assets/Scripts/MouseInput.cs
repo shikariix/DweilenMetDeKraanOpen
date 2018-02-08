@@ -11,7 +11,9 @@ public class MouseInput : MonoBehaviour {
 
 	void Update () {
         input = Input.GetAxis("Mouse ScrollWheel");
-        temp.y = input;
-        cam.position += temp;
+        if (input > 0 && cam.position.y < 2.9f) {
+            temp.y = input;
+            cam.position += temp;
+        }
 	}
 }

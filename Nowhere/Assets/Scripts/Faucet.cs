@@ -8,6 +8,10 @@ public class Faucet : MonoBehaviour {
     public bool isOpen = false;
     public SpriteRenderer sr;
     private int random;
+    public GameObject stream;
+
+
+    public AudioSource aud;
 
     void Update() {
         random = Random.Range(0, 1000);
@@ -26,10 +30,13 @@ public class Faucet : MonoBehaviour {
     void OpenFaucet() {
         isOpen = true;
         Debug.Log("Faucet Opened");
+        stream.SetActive(true);
+        aud.Play();
     }
 
     public void CloseFaucet() {
         isOpen = false;
         Debug.Log("Faucet Closed");
+        stream.SetActive(false);
     }
 }

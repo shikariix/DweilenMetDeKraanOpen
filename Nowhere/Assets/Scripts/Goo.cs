@@ -13,8 +13,8 @@ public class Goo : MonoBehaviour {
         tempPos.y = level / 3;
         transform.position = tempPos;
 
-        if (level < 0) {
-            level = 0;
+        if (level < -1) {
+            level = -1;
         }
 
         if (level > 3.5f) {
