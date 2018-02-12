@@ -10,6 +10,8 @@ public class CloseFaucet : MonoBehaviour {
     public List<Faucet> openFaucets = new List<Faucet>();
     GameObject[] faucetobjs;
 
+    public List<GameObject> nums;
+
     void Awake() {
         faucetobjs = GameObject.FindGameObjectsWithTag("Faucet");
         foreach (GameObject obj in faucetobjs) {
@@ -32,6 +34,10 @@ public class CloseFaucet : MonoBehaviour {
             GenerateNumbers();
         }
         UpdateFaucets();
+
+        if (openFaucets.Count > 0) {
+            DisplayNumbers();
+        }
     }
     
     void GenerateNumbers() {
@@ -43,6 +49,22 @@ public class CloseFaucet : MonoBehaviour {
             int c = Random.Range (0,10);
             neededNums.Add(c.ToString());
         }
+    }
+
+    void DisplayNumbers() {
+        /*
+        for (int i = 0; i < nums.Count; i++) {
+            SpriteRenderer sr = nums[i].GetComponent<SpriteRenderer>();
+            sr.sprite = null;
+        }
+
+        for (int i = 0; i < neededNums.Count; i++) {
+
+            SpriteRenderer sr = nums[i].GetComponent<SpriteRenderer>();
+            sr.sprite = Resources.Load("Keys/" + neededNums[i], typeof(Sprite)) as Sprite;
+
+            nums[i].name = neededNums[i];
+        }*/
     }
 
     void UpdateFaucets() {

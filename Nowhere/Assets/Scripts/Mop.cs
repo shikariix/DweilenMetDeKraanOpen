@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Mop : MonoBehaviour {
 
@@ -18,29 +19,34 @@ public class Mop : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.inputString != "" && Input.anyKeyDown) {
+        if (Input.inputString != "" && Input.anyKeyDown
+                                    && Input.inputString.Length == 1
+                                    && Input.inputString != "0"
+                                    && Input.inputString != "1"
+                                    && Input.inputString != "2"
+                                    && Input.inputString != "3"
+                                    && Input.inputString != "4"
+                                    && Input.inputString != "5"
+                                    && Input.inputString != "6"
+                                    && Input.inputString != "7"
+                                    && Input.inputString != "8"
+                                    && Input.inputString != "9") {
+            
             heldKeys.Add(Input.inputString);
             CheckKeys();
         }
         
         for (int i = 0; i < heldKeys.Count; i++) {
-            if (heldKeys[i].Length > 1 || Input.inputString == "0"
-                                       || Input.inputString == "1"
-                                       || Input.inputString == "2"
-                                       || Input.inputString == "3"
-                                       || Input.inputString == "4"
-                                       || Input.inputString == "5"
-                                       || Input.inputString == "6"
-                                       || Input.inputString == "7"
-                                       || Input.inputString == "8"
-                                       || Input.inputString == "9") {
-                heldKeys.Remove(heldKeys[i]);
-            }
-            else if (Input.GetKeyUp(heldKeys[i])) {
+            if (Input.GetKeyUp(heldKeys[i])) {
                 int index = neededKeys.IndexOf(heldKeys[i]);
-                SpriteRenderer sr = keys[index].GetComponent<SpriteRenderer>();
-                sr.sprite = Resources.Load("Keys/" + neededKeys[index], typeof(Sprite)) as Sprite;
                 heldKeys.Remove(heldKeys[i]);
+                try { 
+                    SpriteRenderer sr = keys[index].GetComponent<SpriteRenderer>();
+                    sr.sprite = Resources.Load("Keys/" + neededKeys[index], typeof(Sprite)) as Sprite;
+                }
+                catch(Exception e) {
+                    Debug.Log("Index out of range");
+                }
             }
         }
     }
@@ -79,14 +85,14 @@ public class Mop : MonoBehaviour {
         //generate a few random chars
         int amount;
         if (goo.level >= 1) {
-            amount = Random.Range(3, 6);
+            amount = UnityEngine.Random.Range(4, 6);
         } else if (goo.level >= 2.5) {
-            amount = Random.Range(4, 8);
+            amount = UnityEngine.Random.Range(5, 8);
         } else {
-            amount = Random.Range(2, 5);
+            amount = UnityEngine.Random.Range(3, 5);
         }
         for (int i = 0; i < amount; i++) {
-            char c = (char)('a' + Random.Range (0,26));
+            char c = (char)('a' + UnityEngine.Random.Range (0,26));
 
             //avoid double chars
             bool included = false;

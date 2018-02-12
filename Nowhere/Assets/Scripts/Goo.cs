@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Goo : MonoBehaviour {
 
-    public float level;
     private Vector3 tempPos;
     public SceneController scene;
     
+    public float level;
+
     void Update() {
         tempPos = transform.position;
         tempPos.y = level / 3;
