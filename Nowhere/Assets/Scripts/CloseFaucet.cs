@@ -37,6 +37,13 @@ public class CloseFaucet : MonoBehaviour {
 
         if (openFaucets.Count > 0) {
             DisplayNumbers();
+        } 
+        else if(openFaucets.Count == 0) {
+
+            for (int i = 0; i < nums.Count; i++) {
+                SpriteRenderer sr = nums[i].GetComponent<SpriteRenderer>();
+                sr.sprite = null;
+            }
         }
     }
     
@@ -52,7 +59,7 @@ public class CloseFaucet : MonoBehaviour {
     }
 
     void DisplayNumbers() {
-        /*
+        
         for (int i = 0; i < nums.Count; i++) {
             SpriteRenderer sr = nums[i].GetComponent<SpriteRenderer>();
             sr.sprite = null;
@@ -61,10 +68,10 @@ public class CloseFaucet : MonoBehaviour {
         for (int i = 0; i < neededNums.Count; i++) {
 
             SpriteRenderer sr = nums[i].GetComponent<SpriteRenderer>();
-            sr.sprite = Resources.Load("Keys/" + neededNums[i], typeof(Sprite)) as Sprite;
+            sr.sprite = Resources.Load("Numbers/" + neededNums[i], typeof(Sprite)) as Sprite;
 
             nums[i].name = neededNums[i];
-        }*/
+        }
     }
 
     void UpdateFaucets() {

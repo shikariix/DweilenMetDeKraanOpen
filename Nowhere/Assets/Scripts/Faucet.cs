@@ -38,5 +38,6 @@ public class Faucet : MonoBehaviour {
         isOpen = false;
         Debug.Log("Faucet Closed");
         stream.SetActive(false);
+        aud.Stop();
     }
 }

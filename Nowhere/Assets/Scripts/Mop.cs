@@ -31,11 +31,21 @@ public class Mop : MonoBehaviour {
                                     && Input.inputString != "7"
                                     && Input.inputString != "8"
                                     && Input.inputString != "9") {
-            
+            Debug.Log(Input.inputString);
             heldKeys.Add(Input.inputString);
             CheckKeys();
+        } 
+        else if (Input.inputString.Length == 2) {
+            Debug.Log(Input.inputString);
+            if (heldKeys.Contains(Input.inputString[1].ToString())) { 
+                heldKeys.Add(Input.inputString[0].ToString());
+            }
+            else if (heldKeys.Contains(Input.inputString[0].ToString())) {
+                heldKeys.Add(Input.inputString[1].ToString());
+            }
+            CheckKeys();
         }
-        
+                    
         for (int i = 0; i < heldKeys.Count; i++) {
             if (Input.GetKeyUp(heldKeys[i])) {
                 int index = neededKeys.IndexOf(heldKeys[i]);
@@ -66,22 +76,28 @@ public class Mop : MonoBehaviour {
         }
 
         if (correctButtons == neededKeys.Count) {
-            anim.SetBool("isMopping", true);
-            DoMopping();
+            StartCoroutine("DoMopping");
         }
         correctButtons = 0;
     }
 
-    void DoMopping() {
+    IEnumerator DoMopping() {
+        anim.SetBool("isMopping", true);
         goo.level -= 0.4f;
         heldKeys.Clear();
         GenerateKeys();
         aud.Play();
-        StartCoroutine("move");
+
+        yield return new WaitForSeconds(1);
+        aud.Stop();
+        anim.SetBool("isMopping", false);
     }
 
     void GenerateKeys() {
         neededKeys.Clear();
+
+        //OLD CODE
+        //REMOVE WHEN ABBREVIATIONS ARE KNOWN
         //generate a few random chars
         int amount;
         if (goo.level >= 1) {
@@ -108,6 +124,87 @@ public class Mop : MonoBehaviour {
             }
         }
 
+        /* NEW CODE
+         * CANNOT USE UNTIL THE ABBREVIATIONS ARE KNOWN
+        int word;
+        if (goo.level >= 1) {
+            word = UnityEngine.Random.Range(11, 20);
+        }
+        else if (goo.level >= 2.5) {
+            word = UnityEngine.Random.Range(21, 30);
+        }
+        else {
+            //default, therefore lowest
+            word = UnityEngine.Random.Range(1, 10);
+        }
+
+        switch(word) {
+            case 1:
+                neededKeys.Add("v");
+                neededKeys.Add("g");
+                neededKeys.Add("n");
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 20:
+                break;
+            case 21:
+                break;
+            case 22:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 25:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 28:
+                break;
+            case 29:
+                break;
+            case 30:
+                break;
+
+        }*/
+
         for (int i = 0; i < keys.Count; i++) {
             SpriteRenderer sr = keys[i].GetComponent<SpriteRenderer>();
             sr.sprite = null;
@@ -121,10 +218,5 @@ public class Mop : MonoBehaviour {
             keys[i].name = neededKeys[i];
         }
     }
-
-    IEnumerator move() {
-        yield return new WaitForSeconds(1);
-
-        anim.SetBool("isMopping", false);
-    }
+    
 }
