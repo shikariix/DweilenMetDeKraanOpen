@@ -83,7 +83,7 @@ public class Mop : MonoBehaviour {
 
     IEnumerator DoMopping() {
         anim.SetBool("isMopping", true);
-        goo.level -= 0.4f;
+        goo.level -= 0.2f;
         heldKeys.Clear();
         GenerateKeys();
         aud.Play();
