@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Faucet : MonoBehaviour {
+    //manages faucet status, sprite of the faucet, all that jazz
 
     public Goo goo;
     public bool isOpen = false;
@@ -20,7 +21,7 @@ public class Faucet : MonoBehaviour {
         }
 
         if (isOpen) {
-            goo.level += 0.0005f;
+            goo.level += 0.0003f;
             sr.sprite = Resources.Load("kraan_glow", typeof(Sprite)) as Sprite;
         } else {
             sr.sprite = Resources.Load("kraan", typeof(Sprite)) as Sprite;

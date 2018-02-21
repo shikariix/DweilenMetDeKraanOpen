@@ -52,7 +52,7 @@ public class Mop : MonoBehaviour {
                 heldKeys.Remove(heldKeys[i]);
                 try { 
                     SpriteRenderer sr = keys[index].GetComponent<SpriteRenderer>();
-                    sr.sprite = Resources.Load("Keys/" + neededKeys[index], typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index], typeof(Sprite)) as Sprite;
                 }
                 catch(Exception e) {
                     Debug.Log("Index out of range");
@@ -71,7 +71,7 @@ public class Mop : MonoBehaviour {
                 //Make sprite glow when it is pressed
                 int index = neededKeys.IndexOf(heldKeys[i]);
                 SpriteRenderer sr = keys[index].GetComponent<SpriteRenderer>();
-                sr.sprite = Resources.Load("Keys/" + neededKeys[index] + "_press", typeof(Sprite)) as Sprite;
+                sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index] + "_press", typeof(Sprite)) as Sprite;
                 }
         }
 
@@ -213,7 +213,7 @@ public class Mop : MonoBehaviour {
         for (int i = 0; i < neededKeys.Count; i++) {
 
             SpriteRenderer sr = keys[i].GetComponent<SpriteRenderer>();
-            sr.sprite = Resources.Load("Keys/" + neededKeys[i], typeof(Sprite)) as Sprite;
+            sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[i], typeof(Sprite)) as Sprite;
 
             keys[i].name = neededKeys[i];
         }

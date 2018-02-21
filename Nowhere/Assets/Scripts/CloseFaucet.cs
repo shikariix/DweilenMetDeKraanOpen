@@ -4,42 +4,30 @@ using UnityEngine;
 
 public class CloseFaucet : MonoBehaviour {
 
-
+    public FaucetManager m;
     public List<string> neededNums;
-
-    public List<Faucet> openFaucets = new List<Faucet>();
-    GameObject[] faucetobjs;
 
     public List<GameObject> nums;
 
     void Awake() {
-        faucetobjs = GameObject.FindGameObjectsWithTag("Faucet");
-        foreach (GameObject obj in faucetobjs) {
-            Faucet temp = obj.GetComponent<Faucet>();
-            if (temp.isOpen) { 
-                openFaucets.Add(temp);
-            }
-        }
         GenerateNumbers();
     }
 
     void Update() {
         if (neededNums.Contains(Input.inputString)) {
-            Debug.Log("Got it!");
             neededNums.Remove(Input.inputString);
         }
 
         if (neededNums.Count < 1) {
-            openFaucets[0].CloseFaucet();
+            m.openFaucets[0].CloseFaucet();
             GenerateNumbers();
         }
-        UpdateFaucets();
+        m.UpdateFaucets();
 
-        if (openFaucets.Count > 0) {
+        if (m.openFaucets.Count > 0) {
             DisplayNumbers();
         } 
-        else if(openFaucets.Count == 0) {
-
+        else if(m.openFaucets.Count == 0) {
             for (int i = 0; i < nums.Count; i++) {
                 SpriteRenderer sr = nums[i].GetComponent<SpriteRenderer>();
                 sr.sprite = null;
@@ -71,16 +59,6 @@ public class CloseFaucet : MonoBehaviour {
             sr.sprite = Resources.Load("Numbers/" + neededNums[i], typeof(Sprite)) as Sprite;
 
             nums[i].name = neededNums[i];
-        }
-    }
-
-    void UpdateFaucets() {
-        openFaucets.Clear();
-        foreach (GameObject obj in faucetobjs) {
-            Faucet temp = obj.GetComponent<Faucet>();
-            if (temp.isOpen) {
-                openFaucets.Add(temp);
-            }
         }
     }
 }
