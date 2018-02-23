@@ -21,11 +21,12 @@ public class FaucetManager : MonoBehaviour {
         //if a faucet is open, it also slightly opens the next
         for (int i = 0; i < faucets.Length; i++) {
             if (faucets[i].isOpen && i < faucets.Length-1) {
-                faucets[i + 1].goo.level += 0.00001f;
+                faucets[i + 1].openAmount += 0.001f;
             } else if (faucets[i].isOpen && i == faucets.Length-1) {
-                faucets[0].goo.level += 0.00001f;
+                faucets[0].openAmount += 0.001f;
             }
         }
+        
     }
 
 

@@ -6,8 +6,9 @@ public class CloseFaucet : MonoBehaviour {
 
     public FaucetManager m;
     public List<string> neededNums;
-
+    public Mop mop;
     public List<GameObject> nums;
+
 
     void Awake() {
         GenerateNumbers();

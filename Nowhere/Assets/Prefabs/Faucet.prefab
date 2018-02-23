@@ -44,7 +44,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4208204574391532
 Transform:
   m_ObjectHideFlags: 1
@@ -52,8 +52,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1674606050847388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -1.1962287, z: -0.2}
-  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
+  m_LocalPosition: {x: 0.1, y: -1.11, z: -0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4626866186130278}
   m_RootOrder: 0
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1587564454694052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 8.72}
+  m_LocalPosition: {x: -1.16, y: 1.4, z: 8.72}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
   - {fileID: 4208204574391532}
@@ -83,7 +83,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 71963703484507f4781283b5f2d49db5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   isOpen: 0
   sr: {fileID: 212563341141617792}
   stream: {fileID: 1674606050847388}
+  openAmount: 0
   aud: {fileID: 82721561645446416}
 --- !u!212 &212176646917318472
 SpriteRenderer:
@@ -202,7 +203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 649d74305548f22468b1de89bfd7c33f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03b3a75396a27c84d88a9f148355d19b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
