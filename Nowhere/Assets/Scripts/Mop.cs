@@ -65,13 +65,13 @@ public class Mop : MonoBehaviour {
                             sr.sprite = Resources.Load("Keys/Green/" + neededKeys[index] + "_g", typeof(Sprite)) as Sprite;
                             break;
                         case 2:
-                            sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[index] + "_y", typeof(Sprite)) as Sprite;
+                            sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index], typeof(Sprite)) as Sprite;
                             break;
                         case 3:
                             sr.sprite = Resources.Load("Keys/Red/" + neededKeys[index] + "_r", typeof(Sprite)) as Sprite;
                             break;
                         case 4:
-                            sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index], typeof(Sprite)) as Sprite;
+                            sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[index] + "_y", typeof(Sprite)) as Sprite;
                             break;
                         default:
                             sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index], typeof(Sprite)) as Sprite;
@@ -100,13 +100,13 @@ public class Mop : MonoBehaviour {
                         sr.sprite = Resources.Load("Keys/Green/" + neededKeys[index] + "_press_g", typeof(Sprite)) as Sprite;
                         break;
                     case 2:
-                        sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[index] + "_press_y", typeof(Sprite)) as Sprite;
+                        sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index] + "_press", typeof(Sprite)) as Sprite;
                         break;
                     case 3:
                         sr.sprite = Resources.Load("Keys/Red/" + neededKeys[index] + "_press_r", typeof(Sprite)) as Sprite;
                         break;
                     case 4:
-                        sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index] + "_press", typeof(Sprite)) as Sprite;
+                        sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[index] + "_press_y", typeof(Sprite)) as Sprite;
                         break;
                     default:
                         sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index] + "_press", typeof(Sprite)) as Sprite;
@@ -125,7 +125,7 @@ public class Mop : MonoBehaviour {
         anim.SetBool("isMopping", true);
         goo.level -= 0.15f;
         Debug.Log(faucetManager.faucets[currentCol - 1].gameObject.name);
-        if (faucetManager.faucets[currentCol-1].isOpen) {
+        if (faucetManager.faucets[currentCol-1].openAmount > 0) {
             faucetManager.faucets[currentCol-1].CloseFaucet();
         }
         heldKeys.Clear();
@@ -401,13 +401,13 @@ public class Mop : MonoBehaviour {
                     sr.sprite = Resources.Load("Keys/Green/" + neededKeys[i] + "_g", typeof(Sprite)) as Sprite;
                     break;
                 case 2:
-                    sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[i] + "_y", typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[i], typeof(Sprite)) as Sprite;
                     break;
                 case 3:
                     sr.sprite = Resources.Load("Keys/Red/" + neededKeys[i] + "_r", typeof(Sprite)) as Sprite;
                     break;
                 case 4:
-                    sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[i], typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[i] + "_y", typeof(Sprite)) as Sprite;
                     break;
                 default:
                     sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[i], typeof(Sprite)) as Sprite;

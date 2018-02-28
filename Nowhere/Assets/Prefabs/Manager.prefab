@@ -63,3 +63,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f34b93fe29700428ac592741f80e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openFaucets: []
+  faucets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
