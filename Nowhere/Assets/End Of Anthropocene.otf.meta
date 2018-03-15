@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 05201a11158b49644b96c55097224518
+timeCreated: 1520093538
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: End Of Anthropocene
+  fontNames:
+  - End Of Anthropocene
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
