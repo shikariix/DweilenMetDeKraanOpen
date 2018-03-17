@@ -11,14 +11,14 @@ public class Goo : MonoBehaviour {
 
     void FixedUpdate() {
             tempPos = transform.position;
-            tempPos.y = level / 25 - 1f;
+            tempPos.y = level / 40 - 1f;
             transform.position = tempPos;
 
             if (level < -1) {
                 level = -1;
             }
 
-            if (level > 25) {
+            if (level > 40) {
                 Debug.Log("You died");
                 scene.GameOver();
             }

@@ -117,263 +117,94 @@ public class Mop : MonoBehaviour {
             //default, therefore lowest
             word = UnityEngine.Random.Range(1, 9);
         }
-
+        string letters = "";
+        
         switch(word) {
             case 1:
-                neededKeys.Add("v");
-                neededKeys.Add("e");
-                neededKeys.Add("g");
-                neededKeys.Add("a");
-                neededKeys.Add("n");
+                letters = "vegan";
                 break;
             case 2:
-                neededKeys.Add("g");
-                neededKeys.Add("r");
-                neededKeys.Add("e");
-                neededKeys.Add("e");
-                neededKeys.Add("n");
+                letters = "green";
                 break;
             case 3:
-                neededKeys.Add("t");
-                neededKeys.Add("r");
-                neededKeys.Add("a");
-                neededKeys.Add("i");
-                neededKeys.Add("n");
-                neededKeys.Add("s");
+                letters = "trains";
                 break;
             case 4:
-                neededKeys.Add("b");
-                neededKeys.Add("i");
-                neededKeys.Add("c");
-                neededKeys.Add("y");
-                neededKeys.Add("c");
-                neededKeys.Add("l");
-                neededKeys.Add("e");
+                letters = "bicycle";
                 break;
             case 5:
-                neededKeys.Add("l");
-                neededKeys.Add("o");
-                neededKeys.Add("o");
-                neededKeys.Add("k");
-                neededKeys.Add("u");
-                neededKeys.Add("p");
+                letters = "lookup";
                 break;
             case 6:
-                neededKeys.Add("g");
-                neededKeys.Add("a");
-                neededKeys.Add("r");
-                neededKeys.Add("d");
-                neededKeys.Add("e");
-                neededKeys.Add("n");
+                letters = "garden";
                 break;
             case 7:
-                neededKeys.Add("h");
-                neededKeys.Add("e");
-                neededKeys.Add("a");
-                neededKeys.Add("l");
-                neededKeys.Add("t");
-                neededKeys.Add("h");
-                neededKeys.Add("y");
+                letters = "healthy";
                 break;
             case 8:
-                neededKeys.Add("z");
-                neededKeys.Add("e");
-                neededKeys.Add("r");
-                neededKeys.Add("o");
-                neededKeys.Add("w");
-                neededKeys.Add("a");
-                neededKeys.Add("s");
-                neededKeys.Add("t");
-                neededKeys.Add("e");
+                letters = "zerowaste";
                 break;
             case 9:
-                neededKeys.Add("r");
-                neededKeys.Add("e");
-                neededKeys.Add("c");
-                neededKeys.Add("y");
-                neededKeys.Add("c");
-                neededKeys.Add("l");
-                neededKeys.Add("e");
+                letters = "recycle";
                 break;
             case 10:
-                neededKeys.Add("s");
-                neededKeys.Add("c");
-                neededKeys.Add("r");
-                neededKeys.Add("k");
-                neededKeys.Add("n");
-                neededKeys.Add("g");
+                letters = "scrkng";
                 break;
             case 11:
-                neededKeys.Add("w");
-                neededKeys.Add("a");
-                neededKeys.Add("t");
-                neededKeys.Add("e");
-                neededKeys.Add("r");
-                neededKeys.Add("f");
-                neededKeys.Add("u");
-                neededKeys.Add("e");
-                neededKeys.Add("l");
+                letters = "waterfuel";
                 break;
             case 12:
-                neededKeys.Add("a");
-                neededKeys.Add("s");
-                neededKeys.Add("c");
-                neededKeys.Add("e");
-                neededKeys.Add("n");
-                neededKeys.Add("d");
+                letters = "ascend";
                 break;
             case 13:
-                neededKeys.Add("c");
-                neededKeys.Add("o");
-                neededKeys.Add("m");
-                neededKeys.Add("p");
-                neededKeys.Add("o");
-                neededKeys.Add("s");
-                neededKeys.Add("t");
-                neededKeys.Add("i");
-                neededKeys.Add("n");
-                neededKeys.Add("g");
+                letters = "composting";
                 break;
             case 14:
-                neededKeys.Add("s");
-                neededKeys.Add("u");
-                neededKeys.Add("n");
-                neededKeys.Add("e");
-                neededKeys.Add("n");
-                neededKeys.Add("e");
-                neededKeys.Add("r");
-                neededKeys.Add("g");
-                neededKeys.Add("y");
+                letters = "sunenergy";
                 break;
             case 15:
-                neededKeys.Add("r");
-                neededKeys.Add("e");
-                neededKeys.Add("u");
-                neededKeys.Add("s");
-                neededKeys.Add("e");
+                letters = "reuse";
                 break;
             case 16:
-                neededKeys.Add("o");
-                neededKeys.Add("t");
-                neededKeys.Add("h");
-                neededKeys.Add("e");
-                neededKeys.Add("r");
-                neededKeys.Add("u");
-                neededKeys.Add("s");
-                neededKeys.Add("e");
-                neededKeys.Add("s");
+                letters = "otheruses";
                 break;
             case 17:
-                neededKeys.Add("q");
-                neededKeys.Add("t");
-                neededKeys.Add("s");
-                neededKeys.Add("m");
-                neededKeys.Add("o");
-                neededKeys.Add("k");
-                neededKeys.Add("n");
+                letters = "quitsmoking";
                 break;
             case 18:
-                neededKeys.Add("c");
-                neededKeys.Add("r");
-                neededKeys.Add("p");
-                neededKeys.Add("o");
-                neededKeys.Add("l");
-                neededKeys.Add("n");
-                neededKeys.Add("g");
+                letters = "crpolng";
                 break;
             case 19:
-                neededKeys.Add("d");
-                neededKeys.Add("g");
-                neededKeys.Add("r");
-                neededKeys.Add("w");
-                neededKeys.Add("s");
-                neededKeys.Add("t");
-                neededKeys.Add("e");
+                letters = "degradewaste";
                 break;
             case 20:
-                neededKeys.Add("s");
-                neededKeys.Add("o");
-                neededKeys.Add("l");
-                neededKeys.Add("a");
-                neededKeys.Add("r");
-                neededKeys.Add("e");
-                neededKeys.Add("n");
-                neededKeys.Add("e");
-                neededKeys.Add("r");
-                neededKeys.Add("g");
-                neededKeys.Add("y");
+                letters = "solarenergy";
                 break;
             case 21:
-                neededKeys.Add("v");
-                neededKeys.Add("t");
-                neededKeys.Add("b");
-                neededKeys.Add("l");
-                neededKeys.Add("g");
-                neededKeys.Add("d");
-                neededKeys.Add("n");
+                letters = "vegetablegarden";
                 break;
             case 22:
-                neededKeys.Add("o");
-                neededKeys.Add("t");
-                neededKeys.Add("h");
-                neededKeys.Add("e");
-                neededKeys.Add("r");
-                neededKeys.Add("u");
-                neededKeys.Add("s");
-                neededKeys.Add("e");
+                letters = "otheruses";
                 break;
             case 23:
-                neededKeys.Add("p");
-                neededKeys.Add("r");
-                neededKeys.Add("d");
-                neededKeys.Add("c");
-                neededKeys.Add("t");
-                neededKeys.Add("l");
-                neededKeys.Add("i");
-                neededKeys.Add("f");
+                letters = "productlife";
                 break;
             case 24:
-                neededKeys.Add("t");
-                neededKeys.Add("h");
-                neededKeys.Add("i");
-                neededKeys.Add("n");
-                neededKeys.Add("k");
-                neededKeys.Add("d");
-                neededKeys.Add("i");
-                neededKeys.Add("f");
-                neededKeys.Add("f");
-                neededKeys.Add("e");
-                neededKeys.Add("r");
-                neededKeys.Add("e");
-                neededKeys.Add("n");
-                neededKeys.Add("t");
+                letters = "thinkdifferent";
                 break;
             case 25:
-                neededKeys.Add("p");
-                neededKeys.Add("r");
-                neededKeys.Add("o");
-                neededKeys.Add("t");
-                neededKeys.Add("e");
-                neededKeys.Add("c");
-                neededKeys.Add("t");
-                neededKeys.Add("a");
-                neededKeys.Add("n");
-                neededKeys.Add("i");
-                neededKeys.Add("m");
-                neededKeys.Add("a");
-                neededKeys.Add("l");
-                neededKeys.Add("s");
+                letters = "protectanimals";
                 break;
             default:
-                neededKeys.Add("h");
-                neededKeys.Add("e");
-                neededKeys.Add("a");
-                neededKeys.Add("l");
-                neededKeys.Add("t");
-                neededKeys.Add("h");
-                neededKeys.Add("y");
+                letters = "healthy";
                 break;
         }
+        
+        
+        foreach (Char c in letters) {
+            neededKeys.Add(c.ToString());
+        }
+        
         currentCol = UnityEngine.Random.Range(1, 5);
         if (displayingKeys) {
             DisplayKeys();
