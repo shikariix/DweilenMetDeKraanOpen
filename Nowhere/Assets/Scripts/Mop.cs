@@ -18,7 +18,6 @@ public class Mop : MonoBehaviour {
 
     private bool displayingKeys = false;
     
-
     void Start() {
         GenerateKeys();
     }
@@ -52,36 +51,6 @@ public class Mop : MonoBehaviour {
                 heldKeys.Add(Input.inputString[1].ToString().ToLower());
             }
             CheckKeys();
-        }
-                    
-        for (int i = 0; i < heldKeys.Count; i++) {
-            if (Input.GetKeyUp(heldKeys[i])) {
-                int index = neededKeys.IndexOf(heldKeys[i]);
-                heldKeys.Remove(heldKeys[i]);
-                try { 
-                    SpriteRenderer sr = keys[index].GetComponent<SpriteRenderer>();
-                    switch (currentCol) {
-                        case 1:
-                            sr.sprite = Resources.Load("Keys/Green/" + neededKeys[index] + "_g", typeof(Sprite)) as Sprite;
-                            break;
-                        case 2:
-                            sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index], typeof(Sprite)) as Sprite;
-                            break;
-                        case 3:
-                            sr.sprite = Resources.Load("Keys/Red/" + neededKeys[index] + "_r", typeof(Sprite)) as Sprite;
-                            break;
-                        case 4:
-                            sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[index] + "_y", typeof(Sprite)) as Sprite;
-                            break;
-                        default:
-                            sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index], typeof(Sprite)) as Sprite;
-                            break;
-                    }
-                }
-                catch(Exception e) {
-                    Debug.Log("Index out of range; button amount messed up");
-                }
-            }
         }
     }
     
@@ -124,10 +93,6 @@ public class Mop : MonoBehaviour {
     IEnumerator DoMopping() {
         anim.SetBool("isMopping", true);
         goo.level -= 0.15f;
-        Debug.Log(faucetManager.faucets[currentCol - 1].gameObject.name);
-        if (faucetManager.faucets[currentCol-1].openAmount > 0) {
-            faucetManager.faucets[currentCol-1].CloseFaucet();
-        }
         heldKeys.Clear();
         GenerateKeys();
         aud.Play();
@@ -140,40 +105,12 @@ public class Mop : MonoBehaviour {
     void GenerateKeys() {
         neededKeys.Clear();
 
-        /*OLD CODE
-        //REMOVE WHEN ABBREVIATIONS ARE KNOWN
-        //generate a few random chars
-        int amount;
-        if (goo.level >= 1) {
-            amount = UnityEngine.Random.Range(4, 6);
-        } else if (goo.level >= 2.5) {
-            amount = UnityEngine.Random.Range(5, 8);
-        } else {
-            amount = UnityEngine.Random.Range(3, 5);
-        }
-        for (int i = 0; i < amount; i++) {
-            char c = (char)('a' + UnityEngine.Random.Range (0,26));
-
-            //avoid double chars
-            bool included = false;
-            foreach(string s in neededKeys) {
-                
-                if (c.ToString() == s) {
-                   included = true;
-                }
-            }
-
-            if (!included) {
-                neededKeys.Add(c.ToString());
-            }
-        }*/
-
         //NEW CODE
         int word;
-        if (goo.level >= 1) {
+        if (goo.level >= 7) {
             word = UnityEngine.Random.Range(18, 26);
         }
-        else if (goo.level >= 2.5) {
+        else if (goo.level >= 15) {
             word = UnityEngine.Random.Range(9, 18);
         }
         else {
@@ -184,18 +121,23 @@ public class Mop : MonoBehaviour {
         switch(word) {
             case 1:
                 neededKeys.Add("v");
+                neededKeys.Add("e");
                 neededKeys.Add("g");
+                neededKeys.Add("a");
                 neededKeys.Add("n");
                 break;
             case 2:
                 neededKeys.Add("g");
                 neededKeys.Add("r");
                 neededKeys.Add("e");
+                neededKeys.Add("e");
                 neededKeys.Add("n");
                 break;
             case 3:
                 neededKeys.Add("t");
                 neededKeys.Add("r");
+                neededKeys.Add("a");
+                neededKeys.Add("i");
                 neededKeys.Add("n");
                 neededKeys.Add("s");
                 break;
@@ -203,10 +145,15 @@ public class Mop : MonoBehaviour {
                 neededKeys.Add("b");
                 neededKeys.Add("i");
                 neededKeys.Add("c");
+                neededKeys.Add("y");
+                neededKeys.Add("c");
                 neededKeys.Add("l");
+                neededKeys.Add("e");
                 break;
             case 5:
                 neededKeys.Add("l");
+                neededKeys.Add("o");
+                neededKeys.Add("o");
                 neededKeys.Add("k");
                 neededKeys.Add("u");
                 neededKeys.Add("p");
@@ -216,27 +163,37 @@ public class Mop : MonoBehaviour {
                 neededKeys.Add("a");
                 neededKeys.Add("r");
                 neededKeys.Add("d");
+                neededKeys.Add("e");
                 neededKeys.Add("n");
                 break;
             case 7:
+                neededKeys.Add("h");
+                neededKeys.Add("e");
                 neededKeys.Add("a");
-                neededKeys.Add("c");
-                neededKeys.Add("d");
-                neededKeys.Add("r");
-                neededKeys.Add("n");
+                neededKeys.Add("l");
+                neededKeys.Add("t");
+                neededKeys.Add("h");
+                neededKeys.Add("y");
                 break;
             case 8:
                 neededKeys.Add("z");
+                neededKeys.Add("e");
                 neededKeys.Add("r");
+                neededKeys.Add("o");
                 neededKeys.Add("w");
+                neededKeys.Add("a");
                 neededKeys.Add("s");
                 neededKeys.Add("t");
+                neededKeys.Add("e");
                 break;
             case 9:
                 neededKeys.Add("r");
+                neededKeys.Add("e");
                 neededKeys.Add("c");
                 neededKeys.Add("y");
+                neededKeys.Add("c");
                 neededKeys.Add("l");
+                neededKeys.Add("e");
                 break;
             case 10:
                 neededKeys.Add("s");
@@ -248,49 +205,63 @@ public class Mop : MonoBehaviour {
                 break;
             case 11:
                 neededKeys.Add("w");
+                neededKeys.Add("a");
                 neededKeys.Add("t");
+                neededKeys.Add("e");
                 neededKeys.Add("r");
                 neededKeys.Add("f");
                 neededKeys.Add("u");
+                neededKeys.Add("e");
                 neededKeys.Add("l");
                 break;
             case 12:
                 neededKeys.Add("a");
                 neededKeys.Add("s");
                 neededKeys.Add("c");
+                neededKeys.Add("e");
                 neededKeys.Add("n");
                 neededKeys.Add("d");
                 break;
             case 13:
                 neededKeys.Add("c");
+                neededKeys.Add("o");
                 neededKeys.Add("m");
                 neededKeys.Add("p");
+                neededKeys.Add("o");
                 neededKeys.Add("s");
                 neededKeys.Add("t");
+                neededKeys.Add("i");
                 neededKeys.Add("n");
-                neededKeys.Add("p");
+                neededKeys.Add("g");
                 break;
             case 14:
                 neededKeys.Add("s");
                 neededKeys.Add("u");
                 neededKeys.Add("n");
+                neededKeys.Add("e");
+                neededKeys.Add("n");
+                neededKeys.Add("e");
                 neededKeys.Add("r");
                 neededKeys.Add("g");
+                neededKeys.Add("y");
                 break;
             case 15:
                 neededKeys.Add("r");
                 neededKeys.Add("e");
                 neededKeys.Add("u");
                 neededKeys.Add("s");
+                neededKeys.Add("e");
                 break;
             case 16:
                 neededKeys.Add("o");
                 neededKeys.Add("t");
                 neededKeys.Add("h");
+                neededKeys.Add("e");
                 neededKeys.Add("r");
                 neededKeys.Add("u");
                 neededKeys.Add("s");
                 neededKeys.Add("e");
+                neededKeys.Add("s");
                 break;
             case 17:
                 neededKeys.Add("q");
@@ -321,10 +292,16 @@ public class Mop : MonoBehaviour {
                 break;
             case 20:
                 neededKeys.Add("s");
+                neededKeys.Add("o");
                 neededKeys.Add("l");
+                neededKeys.Add("a");
+                neededKeys.Add("r");
+                neededKeys.Add("e");
                 neededKeys.Add("n");
+                neededKeys.Add("e");
                 neededKeys.Add("r");
                 neededKeys.Add("g");
+                neededKeys.Add("y");
                 break;
             case 21:
                 neededKeys.Add("v");
@@ -339,6 +316,7 @@ public class Mop : MonoBehaviour {
                 neededKeys.Add("o");
                 neededKeys.Add("t");
                 neededKeys.Add("h");
+                neededKeys.Add("e");
                 neededKeys.Add("r");
                 neededKeys.Add("u");
                 neededKeys.Add("s");
@@ -357,26 +335,42 @@ public class Mop : MonoBehaviour {
             case 24:
                 neededKeys.Add("t");
                 neededKeys.Add("h");
+                neededKeys.Add("i");
                 neededKeys.Add("n");
                 neededKeys.Add("k");
                 neededKeys.Add("d");
+                neededKeys.Add("i");
                 neededKeys.Add("f");
+                neededKeys.Add("f");
+                neededKeys.Add("e");
                 neededKeys.Add("r");
+                neededKeys.Add("e");
+                neededKeys.Add("n");
+                neededKeys.Add("t");
                 break;
             case 25:
                 neededKeys.Add("p");
                 neededKeys.Add("r");
+                neededKeys.Add("o");
                 neededKeys.Add("t");
+                neededKeys.Add("e");
                 neededKeys.Add("c");
+                neededKeys.Add("t");
                 neededKeys.Add("a");
                 neededKeys.Add("n");
+                neededKeys.Add("i");
                 neededKeys.Add("m");
+                neededKeys.Add("a");
                 neededKeys.Add("l");
+                neededKeys.Add("s");
                 break;
             default:
                 neededKeys.Add("h");
+                neededKeys.Add("e");
+                neededKeys.Add("a");
                 neededKeys.Add("l");
                 neededKeys.Add("t");
+                neededKeys.Add("h");
                 neededKeys.Add("y");
                 break;
         }

@@ -9,18 +9,18 @@ public class Goo : MonoBehaviour {
     
     public float level;
 
-    void Update() {
-        tempPos = transform.position;
-        tempPos.y = level / 3;
-        transform.position = tempPos;
+    void FixedUpdate() {
+            tempPos = transform.position;
+            tempPos.y = level / 25 - 1f;
+            transform.position = tempPos;
 
-        if (level < -1) {
-            level = -1;
-        }
+            if (level < -1) {
+                level = -1;
+            }
 
-        if (level > 3.5f) {
-            Debug.Log("You died");
-            scene.GameOver();
-        }
+            if (level > 25) {
+                Debug.Log("You died");
+                scene.GameOver();
+            }
     }
 }

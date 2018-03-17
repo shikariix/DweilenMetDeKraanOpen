@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour {
 
     public Transform canvas;
+    public Transform menuCanvas;
 
     public void StartGame() {
         SceneManager.LoadScene("Main");
@@ -29,26 +30,26 @@ public class SceneController : MonoBehaviour {
 
 
     //vanaf hier is de code die ik heb toegevoegd
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             PauseGame();
             Cursor.visible = true;
         }
     }
 
-    public void PauseGame()
-    {
-        if (canvas.gameObject.activeInHierarchy == false)
-        {
+    public void PauseGame() {
+        if (!canvas.gameObject.active) {
             canvas.gameObject.SetActive(true);
-            Time.timeScale = 0;
+            StartCoroutine("SetTimeScale");
         }
-        else
-        {
+        else {
             canvas.gameObject.SetActive(false);
             Time.timeScale = 1;
         }
+    }
+    
+    public IEnumerator SetTimeScale() {
+        yield return new WaitForSeconds(1);
+        Time.timeScale = 0;
     }
 }

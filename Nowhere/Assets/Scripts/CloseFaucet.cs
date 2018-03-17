@@ -20,7 +20,6 @@ public class CloseFaucet : MonoBehaviour {
         }
 
         if (neededNums.Count < 1) {
-            m.openFaucets[0].CloseFaucet();
             GenerateNumbers();
         }
         m.UpdateFaucets();
