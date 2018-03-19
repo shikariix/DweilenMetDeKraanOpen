@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour {
 
     public void StartGame() {
         SceneManager.LoadScene("Main");
+        StartCoroutine("WaitForStart"); //zie beneden
     }
 
     public void GameOver() {
@@ -28,8 +29,6 @@ public class SceneController : MonoBehaviour {
         SceneManager.LoadScene("Menu");
     }
 
-
-    //vanaf hier is de code die ik heb toegevoegd
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             PauseGame();
@@ -51,5 +50,9 @@ public class SceneController : MonoBehaviour {
     public IEnumerator SetTimeScale() {
         yield return new WaitForSeconds(1);
         Time.timeScale = 0;
+    }
+
+    IEnumerator WaitForStart() {
+        yield return new WaitForSeconds(5); //hoe laat ik t spel wachten met beginnen...?
     }
 }
