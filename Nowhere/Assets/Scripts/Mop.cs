@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Mop : MonoBehaviour {
 
@@ -9,7 +10,6 @@ public class Mop : MonoBehaviour {
     public FaucetManager faucetManager;
     public List<string> heldKeys = new List<string>();
     public List<string> neededKeys;
-    private int correctButtons;
     public int currentCol;
     public List<GameObject> keys;
 
@@ -17,6 +17,7 @@ public class Mop : MonoBehaviour {
     public AudioSource aud;
 
     private bool displayingKeys = false;
+    private int correctKeys = 0;
     
     void Start() {
         GenerateKeys();
@@ -26,74 +27,65 @@ public class Mop : MonoBehaviour {
         if (faucetManager.openFaucets.Count > 0 && !displayingKeys) {
             DisplayKeys();
         }
-
-        if (Input.inputString.ToLower() != "" && Input.anyKeyDown
-                                    && Input.inputString.Length == 1
-                                    && Input.inputString != "0"
-                                    && Input.inputString != "1"
-                                    && Input.inputString != "2"
-                                    && Input.inputString != "3"
-                                    && Input.inputString != "4"
-                                    && Input.inputString != "5"
-                                    && Input.inputString != "6"
-                                    && Input.inputString != "7"
-                                    && Input.inputString != "8"
-                                    && Input.inputString != "9") {
-            heldKeys.Add(Input.inputString.ToLower());
-            CheckKeys();
-        } 
-        else if (Input.inputString.Length == 2) {
-            Debug.Log(Input.inputString);
-            if (heldKeys.Contains(Input.inputString[1].ToString().ToLower())) { 
-                heldKeys.Add(Input.inputString[0].ToString().ToLower());
-            }
-            else if (heldKeys.Contains(Input.inputString[0].ToString().ToLower())) {
-                heldKeys.Add(Input.inputString[1].ToString().ToLower());
-            }
-            CheckKeys();
+        
+        if (Input.inputString != "" || Input.inputString != "0"
+                                    || Input.inputString != "1"
+                                    || Input.inputString != "2"
+                                    || Input.inputString != "3"
+                                    || Input.inputString != "4"
+                                    || Input.inputString != "5"
+                                    || Input.inputString != "6"
+                                    || Input.inputString != "7"
+                                    || Input.inputString != "8"
+                                    || Input.inputString != "9") {
+            CheckKeys(Input.inputString);
+            
         }
     }
     
-    void CheckKeys() {
-        //for all buttons needed
-        for (int i = 0; i < heldKeys.Count; i++) {
-            //check if buttons are equal
-            if (neededKeys.Contains(heldKeys[i])) {
-                correctButtons++;
-
-                //Make sprite glow when it is pressed
-                int index = neededKeys.IndexOf(heldKeys[i]);
-                SpriteRenderer sr = keys[index].GetComponent<SpriteRenderer>();
-                switch (currentCol) {
-                    case 1:
-                        sr.sprite = Resources.Load("Keys/Green/" + neededKeys[index] + "_press_g", typeof(Sprite)) as Sprite;
-                        break;
-                    case 2:
-                        sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index] + "_press", typeof(Sprite)) as Sprite;
-                        break;
-                    case 3:
-                        sr.sprite = Resources.Load("Keys/Red/" + neededKeys[index] + "_press_r", typeof(Sprite)) as Sprite;
-                        break;
-                    case 4:
-                        sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[index] + "_press_y", typeof(Sprite)) as Sprite;
-                        break;
-                    default:
-                        sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[index] + "_press", typeof(Sprite)) as Sprite;
-                        break;
-                }
+    void CheckKeys(string input) {
+        
+        //check if buttons are equal
+        if (neededKeys[correctKeys] == input) {
+            //Make sprite glow when it is pressed
+            var sr = keys[correctKeys].GetComponent<SpriteRenderer>();
+            var t = keys[correctKeys].GetComponentInChildren<Text>();
+            switch (currentCol) {
+                case 1:
+                    sr.sprite = Resources.Load("Keys/g_press", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[correctKeys].ToUpper();
+                    break;
+                case 2:
+                    sr.sprite = Resources.Load("Keys/b_press", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[correctKeys].ToUpper();
+                    break;
+                case 3:
+                    sr.sprite = Resources.Load("Keys/r_press", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[correctKeys].ToUpper();
+                    break;
+                case 4:
+                    sr.sprite = Resources.Load("Keys/y_press", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[correctKeys].ToUpper();
+                    break;
+                default:
+                    sr.sprite = Resources.Load("Keys/b_press", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[correctKeys].ToUpper();
+                    break;
             }
+
+            correctKeys++;
+
         }
 
-        if (correctButtons == neededKeys.Count) {
+        if (correctKeys == neededKeys.Count) {
             StartCoroutine("DoMopping");
+            correctKeys = 0;
         }
-        correctButtons = 0;
     }
 
     IEnumerator DoMopping() {
         anim.SetBool("isMopping", true);
-        goo.level -= 0.15f;
-        heldKeys.Clear();
+        goo.level -= 1;
         GenerateKeys();
         aud.Play();
 
@@ -107,15 +99,15 @@ public class Mop : MonoBehaviour {
 
         //NEW CODE
         int word;
-        if (goo.level >= 7) {
-            word = UnityEngine.Random.Range(18, 26);
+        if (goo.level >= 25) {
+            word = UnityEngine.Random.Range(21, 31);
         }
-        else if (goo.level >= 15) {
-            word = UnityEngine.Random.Range(9, 18);
+        else if (goo.level >= 12) {
+            word = UnityEngine.Random.Range(11, 21);
         }
         else {
             //default, therefore lowest
-            word = UnityEngine.Random.Range(1, 9);
+            word = UnityEngine.Random.Range(1, 11);
         }
         string letters = "";
         
@@ -148,7 +140,7 @@ public class Mop : MonoBehaviour {
                 letters = "recycle";
                 break;
             case 10:
-                letters = "scrkng";
+                letters = "userainwater";
                 break;
             case 11:
                 letters = "waterfuel";
@@ -160,7 +152,7 @@ public class Mop : MonoBehaviour {
                 letters = "composting";
                 break;
             case 14:
-                letters = "sunenergy";
+                letters = "opendoor";
                 break;
             case 15:
                 letters = "reuse";
@@ -172,7 +164,7 @@ public class Mop : MonoBehaviour {
                 letters = "quitsmoking";
                 break;
             case 18:
-                letters = "crpolng";
+                letters = "carpooling";
                 break;
             case 19:
                 letters = "degradewaste";
@@ -193,13 +185,27 @@ public class Mop : MonoBehaviour {
                 letters = "thinkdifferent";
                 break;
             case 25:
-                letters = "protectanimals";
+                letters = "durablecontainer";
+                break;
+            case 26:
+                letters = "scraprecipes";
+                break;
+            case 27:
+                letters = "papercups";
+                break;
+            case 28:
+                letters = "planttrees";
+                break;
+            case 29:
+                letters = "findkey";
+                break;
+            case 30:
+                letters = "vegandiet";
                 break;
             default:
-                letters = "healthy";
+                letters = "thinkdifferent";
                 break;
         }
-        
         
         foreach (Char c in letters) {
             neededKeys.Add(c.ToString());
@@ -217,25 +223,33 @@ public class Mop : MonoBehaviour {
         for (int i = 0; i < keys.Count; i++) {
             SpriteRenderer sr = keys[i].GetComponent<SpriteRenderer>();
             sr.sprite = null;
+            Text t = keys[i].GetComponentInChildren<Text>();
+            t.text = "";
         }
 
         for (int i = 0; i < neededKeys.Count; i++) {
             SpriteRenderer sr = keys[i].GetComponent<SpriteRenderer>();
+            Text t = keys[i].GetComponentInChildren<Text>();
             switch (currentCol) {
                 case 1:
-                    sr.sprite = Resources.Load("Keys/Green/" + neededKeys[i] + "_g", typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/g", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[i].ToUpper();
                     break;
                 case 2:
-                    sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[i], typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/b", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[i].ToUpper();
                     break;
                 case 3:
-                    sr.sprite = Resources.Load("Keys/Red/" + neededKeys[i] + "_r", typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/r", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[i].ToUpper();
                     break;
                 case 4:
-                    sr.sprite = Resources.Load("Keys/Yellow/" + neededKeys[i] + "_y", typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/g", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[i].ToUpper();
                     break;
                 default:
-                    sr.sprite = Resources.Load("Keys/Blue/" + neededKeys[i], typeof(Sprite)) as Sprite;
+                    sr.sprite = Resources.Load("Keys/b", typeof(Sprite)) as Sprite;
+                    t.text = neededKeys[i].ToUpper();
                     break;
             }
 
