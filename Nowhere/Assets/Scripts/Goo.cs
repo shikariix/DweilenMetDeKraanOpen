@@ -11,11 +11,11 @@ public class Goo : MonoBehaviour {
 
     void FixedUpdate() {
             tempPos = transform.position;
-            tempPos.y = level / 40 - 1f;
+            tempPos.y = (level / 40) + 4.2f;
             transform.position = tempPos;
 
-            if (level < -1) {
-                level = -1;
+            if (level < 4.2f) {
+                level = 4.2f;
             }
 
             if (level > 60) {

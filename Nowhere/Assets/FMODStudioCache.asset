@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114540662770964260}
-  - {fileID: 114905627130261528}
+  - {fileID: 114624682785482656}
   EditorEvents:
   - {fileID: 114351004853512016}
-  MasterBankRef: {fileID: 114905627130261528}
+  MasterBankRef: {fileID: 114624682785482656}
   StringsBankRef: {fileID: 114540662770964260}
-  stringsBankWriteTime: 636553902100000000
+  stringsBankWriteTime: 636567271825220520
   cacheVersion: 2
 --- !u!114 &114213702323512672
 MonoBehaviour:
@@ -49,12 +49,12 @@ MonoBehaviour:
   Path: event:/Music
   guid: f4dba34a07db6748a17a19ceeb542f41
   Banks:
-  - {fileID: 114905627130261528}
+  - {fileID: 114624682785482656}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114610173030272448}
+  - {fileID: 114860291075398368}
   MinDistance: 0
   MaxDistance: 0
   Length: 62439
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: SoundGameJam\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636553902100000000
+  lastModified: 636567271825220520
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -109,7 +109,41 @@ MonoBehaviour:
   Min: 0
   Max: 6
   Default: 0
+--- !u!114 &114624682785482656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Demi\Desktop\DweilenMetDeKraanOpen\Nowhere\SoundGameJam\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636567271825205480
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4760544
+  Exists: 1
 --- !u!114 &114822554517673266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volumes
+  Min: 0
+  Max: 6
+  Default: 0
+--- !u!114 &114860291075398368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}

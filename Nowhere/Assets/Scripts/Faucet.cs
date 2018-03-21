@@ -9,17 +9,16 @@ public class Faucet : MonoBehaviour {
     public FaucetManager fm;
     public bool isOpen = false;
     private int random;
+    private bool gameStarted = false;
     public GameObject stream;
 
     public float openAmount;
 
     public AudioSource aud;
-
+    
+    
     void FixedUpdate() {
-        random = Random.Range(0, 1000);
-        if (random == 7 && !isOpen) {
-            OpenFaucet();
-        }
+        StartCoroutine("CheckToOpenFaucet");
 
         if (isOpen) {
             goo.level += openAmount * Time.deltaTime;
@@ -39,6 +38,20 @@ public class Faucet : MonoBehaviour {
         Vector3 tempScale = stream.transform.localScale;
         tempScale.x = openAmount;
         stream.transform.localScale = tempScale;
+    }
+
+    private IEnumerator CheckToOpenFaucet()
+    {
+        if (!gameStarted) { 
+        yield return new WaitForSeconds(4);
+            gameStarted = true;
+        }
+
+        random = Random.Range(0, 1000);
+        if (random == 7 && !isOpen)
+        {
+            OpenFaucet();
+        }
     }
 
     void OpenFaucet() {

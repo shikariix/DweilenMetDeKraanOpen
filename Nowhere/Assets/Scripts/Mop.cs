@@ -11,7 +11,7 @@ public class Mop : MonoBehaviour {
     public List<string> heldKeys = new List<string>();
     public List<string> neededKeys;
     public int currentCol;
-    public List<GameObject> keys;
+    public GameObject[] keys;
 
     public Animator anim;
     public AudioSource aud;
@@ -220,7 +220,7 @@ public class Mop : MonoBehaviour {
     void DisplayKeys() {
         displayingKeys = true;
         //empty keys so none are left behind
-        for (int i = 0; i < keys.Count; i++) {
+        for (int i = 0; i < keys.Length; i++) {
             SpriteRenderer sr = keys[i].GetComponent<SpriteRenderer>();
             sr.sprite = null;
             Text t = keys[i].GetComponentInChildren<Text>();

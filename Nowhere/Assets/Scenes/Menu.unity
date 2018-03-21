@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   menuCanvas: {fileID: 0}
+  c: {fileID: 0}
 --- !u!4 &448226611
 Transform:
   m_ObjectHideFlags: 0
