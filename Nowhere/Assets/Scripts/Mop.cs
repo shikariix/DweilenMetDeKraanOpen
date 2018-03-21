@@ -48,7 +48,7 @@ public class Mop : MonoBehaviour {
         //check if buttons are equal
         if (neededKeys[correctKeys] == input) {
             //Make sprite glow when it is pressed
-            var sr = keys[correctKeys].GetComponent<SpriteRenderer>();
+            var sr = keys[correctKeys].GetComponent<Image>();
             var t = keys[correctKeys].GetComponentInChildren<Text>();
             switch (currentCol) {
                 case 1:
@@ -221,14 +221,20 @@ public class Mop : MonoBehaviour {
         displayingKeys = true;
         //empty keys so none are left behind
         for (int i = 0; i < keys.Length; i++) {
-            SpriteRenderer sr = keys[i].GetComponent<SpriteRenderer>();
-            sr.sprite = null;
+            Image sr = keys[i].GetComponent<Image>();
+            var alpha = sr.color;
+            alpha.a = 0;
+            sr.color = alpha;
             Text t = keys[i].GetComponentInChildren<Text>();
             t.text = "";
         }
 
         for (int i = 0; i < neededKeys.Count; i++) {
-            SpriteRenderer sr = keys[i].GetComponent<SpriteRenderer>();
+            Image sr = keys[i].GetComponent<Image>();
+            var alpha = sr.color;
+            alpha.a = 1;
+            sr.color = alpha;
+
             Text t = keys[i].GetComponentInChildren<Text>();
             switch (currentCol) {
                 case 1:
