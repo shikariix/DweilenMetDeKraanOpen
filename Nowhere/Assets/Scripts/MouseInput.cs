@@ -20,18 +20,23 @@ public class MouseInput : MonoBehaviour {
             
         }*/
         time += Time.deltaTime;
-        if (time > 15) { 
+        if (time > 1) { 
             mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             temp = container.position;
+            Debug.Log(mousePos);
 
-            if (mousePos.y > 0.9 || mousePos.x > 0.9 || mousePos.x < 0.2) {
-                temp.x = Mathf.Lerp(container.position.x, mousePos.x, 0.001f);
-                temp.y = Mathf.Lerp(container.position.y, mousePos.y, 0.001f);
+            if (container.position.y <= 8.1f && container.position.y > 2.6f ) { 
+                if (mousePos.y > 0.9) {
+                    temp.y = Mathf.Lerp(container.position.y, mousePos.y, 0.001f);
             
-                if (mousePos.y > 1) {
-                    temp.y += 0.01f;
+                    if (mousePos.y > 1) {
+                      temp.y += 0.01f;
+                    }
+                    container.position = temp;
                 }
-                container.position = temp;
+            } else if (container.position.y > 8.1f)
+            {
+                container.position = new Vector3(container.position.x, 8.1f, container.position.z);
             }
         }
     }
