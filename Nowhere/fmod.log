@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000004BB144B8 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000000401D8DB8 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -21,6 +21,376 @@
 [LOG] Manager::readBank                        : fileversion = 99, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] Manager::readBank                        : fileversion = 99, compatVersion = 99 (oldest = 44, newest = 100)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 00000000401559B8 : node = 00000000401C8900
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000401495D8.  list count = 0
+[LOG] SystemI::createSound                     : filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000401559B8
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040156DF8 : node = 00000000401C9380
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C8A18
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040156C48 : node = 00000000401C8BA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000000401554A8 : node = 00000000401C8F90
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 2
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040156738 : node = 00000000401C9620
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 3
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000000401568E8 : node = 00000000401C90E0
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 4
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040155D18 : node = 00000000401C8CF0
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 5
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040155658 : node = 00000000401C9230
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 6
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040156FA8 : node = 00000000401C94D0
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 7
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040156588 : node = 00000000401C8A50
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 8
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040155B68 : node = 00000000401C8E40
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 9
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040155808 : node = 000000003FEFC110
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 10
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl6', format=2, channels=2, frequency=48000, lengthbytes=730560, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.081372.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000401559B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156DF8
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C9498
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl2', format=2, channels=2, frequency=48000, lengthbytes=677376, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.110946.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156DF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156C48
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C8CB8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl1', format=2, channels=2, frequency=48000, lengthbytes=764896, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138355.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156C48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000401554A8
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C90A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl3', format=2, channels=2, frequency=48000, lengthbytes=834240, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.114223.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000401554A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156738
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C9738
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl4', format=2, channels=2, frequency=48000, lengthbytes=898816, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.331942.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156738
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000401568E8
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C91F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl5', format=2, channels=2, frequency=48000, lengthbytes=832704, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.246417.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000401568E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040155D18
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C8E08
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl6', format=2, channels=2, frequency=48000, lengthbytes=730560, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.081372.
+[LOG] SoundI::release                          :     Game Jam lvl5 (00000000401568E8)
+[LOG] SoundI::release                          :         Game Jam lvl5 (0000000040149628)
+[LOG] SoundI::release                          :         Game Jam lvl5 (000000003FB51488)
+[LOG] SoundI::release                          :     Game Jam lvl4 (0000000040156738)
+[LOG] SoundI::release                          :         Game Jam lvl4 (000000004014A328)
+[LOG] SoundI::release                          :         Game Jam lvl4 (0000000040156228)
+[LOG] SoundI::release                          :     Game Jam lvl3 (00000000401554A8)
+[LOG] SoundI::release                          :         Game Jam lvl3 (000000004014A9A8)
+[LOG] SoundI::release                          :         Game Jam lvl3 (0000000040155EC8)
+[LOG] SoundI::release                          :     Game Jam lvl1 (0000000040156C48)
+[LOG] SoundI::release                          :         Game Jam lvl1 (00000000401497C8)
+[LOG] SoundI::release                          :         Game Jam lvl1 (0000000040156078)
+[LOG] SoundI::release                          :     Game Jam lvl2 (0000000040156DF8)
+[LOG] SoundI::release                          :         Game Jam lvl2 (0000000040149FE8)
+[LOG] SoundI::release                          :         Game Jam lvl2 (0000000040156A98)
+[LOG] SoundI::release                          :     Game Jam lvl6 (00000000401559B8)
+[LOG] SoundI::release                          :         Game Jam lvl6 (000000004014A668)
+[LOG] SoundI::release                          :         Game Jam lvl6 (0000000040157158)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040155D18
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040155658
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C9348
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl2', format=2, channels=2, frequency=48000, lengthbytes=677376, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.110946.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040155658
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156FA8
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C95E8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl1', format=2, channels=2, frequency=48000, lengthbytes=764896, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138355.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156FA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156588
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C8B68
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl3', format=2, channels=2, frequency=48000, lengthbytes=834240, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.114223.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156588
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040155B68
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000401C8F58
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl4', format=2, channels=2, frequency=48000, lengthbytes=898816, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.331942.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040155B68
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040155808
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003FEFC228
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl5', format=2, channels=2, frequency=48000, lengthbytes=832704, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.246417.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040155808
+[LOG] SoundI::getSubSound                      : sound 0000000040155D18.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040155658.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040156FA8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040156588.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040155B68.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040155808.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003FB512D8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003FB512D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003FB51B48
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003FB51B48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003FB51CF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003FB51CF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003FB51488
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003FB51488
+[LOG] SystemI::createSound                     : filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000040156228 : node = 000000003FEFC260
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000401495D8.  list count = 0
+[LOG] SystemI::createSound                     : filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000040156078 : node = 000000003FEFC650
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156228
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000401495D8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040157158 : node = 000000003FEFB7E0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003FEFC378
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000040156738 : node = 000000003FEFBA80
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 2
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000000401559B8 : node = 000000003FEFB2A0
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 3
+[LOG] SystemI::createSound                     :     filename = SoundGameJam\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 00000000401568E8 : node = 000000003FEFAD60
+[LOG] SystemI::createSound                     :     add node to async list : head = 00000000401495D8.  list count = 4
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl6', format=2, channels=2, frequency=48000, lengthbytes=730560, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.081372.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156228
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156078
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003FEFC768
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl2', format=2, channels=2, frequency=48000, lengthbytes=677376, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.110946.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156078
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040157158
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003FEFB8F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl1', format=2, channels=2, frequency=48000, lengthbytes=764896, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138355.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040157158
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156738
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003FEFBB98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl3', format=2, channels=2, frequency=48000, lengthbytes=834240, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.114223.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156738
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000401559B8
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003FEFB3B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl4', format=2, channels=2, frequency=48000, lengthbytes=898816, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.331942.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000401559B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000401568E8
+[LOG] SystemI::createSoundInternal             :     Create name='SoundGameJam\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 4743488
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 17056
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000003FEFAE78
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Game Jam lvl5', format=2, channels=2, frequency=48000, lengthbytes=832704, lengthpcm=2997073, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.246417.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000401568E8
+[LOG] SoundI::getSubSound                      : sound 0000000040156228.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040156078.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040157158.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000000040156738.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 00000000401559B8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 00000000401568E8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Game Jam lvl5 (0000000040155808)
+[LOG] SoundI::release                          :     Game Jam lvl5 (000000004014A328)
+[LOG] SoundI::release                          :     Game Jam lvl5 (000000003FB51488)
+[LOG] SoundI::release                          : Game Jam lvl4 (0000000040155B68)
+[LOG] SoundI::release                          :     Game Jam lvl4 (000000004014A9A8)
+[LOG] SoundI::release                          :     Game Jam lvl4 (000000003FB51CF8)
+[LOG] SoundI::release                          : Game Jam lvl3 (0000000040156588)
+[LOG] SoundI::release                          :     Game Jam lvl3 (0000000040149968)
+[LOG] SoundI::release                          :     Game Jam lvl3 (000000003FB51B48)
+[LOG] SoundI::release                          : Game Jam lvl1 (0000000040156FA8)
+[LOG] SoundI::release                          :     Game Jam lvl1 (0000000040149FE8)
+[LOG] SoundI::release                          :     Game Jam lvl1 (000000003FB51998)
+[LOG] SoundI::release                          : Game Jam lvl6 (0000000040155D18)
+[LOG] SoundI::release                          :     Game Jam lvl6 (000000004014A188)
+[LOG] SoundI::release                          :     Game Jam lvl6 (000000003FB51128)
+[LOG] SoundI::release                          : Game Jam lvl2 (0000000040155658)
+[LOG] SoundI::release                          :     Game Jam lvl2 (000000004014B1C8)
+[LOG] SoundI::release                          :     Game Jam lvl2 (000000003FB512D8)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000401554A8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000401554A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000040156C48
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000040156C48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000011D47288
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000011D47288
+[LOG] SoundI::release                          : Game Jam lvl5 (00000000401568E8)
+[LOG] SoundI::release                          :     Game Jam lvl5 (000000004014AB48)
+[LOG] SoundI::release                          :     Game Jam lvl5 (0000000011D47288)
+[LOG] SoundI::release                          : Game Jam lvl4 (00000000401559B8)
+[LOG] SoundI::release                          :     Game Jam lvl4 (0000000040149B08)
+[LOG] SoundI::release                          :     Game Jam lvl4 (0000000040156C48)
+[LOG] SoundI::release                          : Game Jam lvl3 (0000000040156738)
+[LOG] SoundI::release                          :     Game Jam lvl3 (00000000401497C8)
+[LOG] SoundI::release                          :     Game Jam lvl3 (00000000401554A8)
+[LOG] SoundI::release                          : Game Jam lvl1 (0000000040157158)
+[LOG] SoundI::release                          :     Game Jam lvl1 (000000004014AE88)
+[LOG] SoundI::release                          :     Game Jam lvl1 (0000000040156A98)
+[LOG] SoundI::release                          : Game Jam lvl2 (0000000040156078)
+[LOG] SoundI::release                          :     Game Jam lvl2 (0000000040149628)
+[LOG] SoundI::release                          :     Game Jam lvl2 (0000000040156DF8)
+[LOG] SoundI::release                          : Game Jam lvl6 (0000000040156228)
+[LOG] SoundI::release                          :     Game Jam lvl6 (000000004014B028)
+[LOG] SoundI::release                          :     Game Jam lvl6 (0000000040155EC8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -30,4 +400,6 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
