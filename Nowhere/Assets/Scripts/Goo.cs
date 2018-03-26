@@ -18,7 +18,7 @@ public class Goo : MonoBehaviour {
                 level = 4.2f;
             }
 
-            if (level > 60) {
+            if (level > 70) {
                 Debug.Log("You died");
                 scene.GameOver();
             }

@@ -11,6 +11,7 @@ public class Mop : MonoBehaviour {
     public List<string> heldKeys = new List<string>();
     public List<string> neededKeys;
     public int currentCol;
+    private int previousCol;
     public GameObject[] keys;
 
     public Animator anim;
@@ -18,12 +19,16 @@ public class Mop : MonoBehaviour {
 
     private bool displayingKeys = false;
     private int correctKeys = 0;
+    private float time;
+    private int word;
+    private int previousWord;
     
     void Start() {
         GenerateKeys();
     }
 
     void Update() {
+        time += Time.deltaTime;
         if (faucetManager.openFaucets.Count > 0 && !displayingKeys) {
             DisplayKeys();
         }
@@ -73,42 +78,39 @@ public class Mop : MonoBehaviour {
                     break;
             }
 
+            StartCoroutine("MopAnimation");
             correctKeys++;
 
         }
 
         if (correctKeys == neededKeys.Count) {
-            StartCoroutine("DoMopping");
+            DoMopping();
             correctKeys = 0;
         }
     }
 
-    IEnumerator DoMopping() {
-        anim.SetBool("isMopping", true);
+    void DoMopping() {
         goo.level -= 1;
         GenerateKeys();
+    }
+
+    IEnumerator MopAnimation() {
+        anim.SetBool("isMopping", true);
         aud.Play();
 
         yield return new WaitForSeconds(1);
-        aud.Stop();
         anim.SetBool("isMopping", false);
+        aud.Stop();
     }
 
     void GenerateKeys() {
         neededKeys.Clear();
-
-        //NEW CODE
-        int word;
-        if (goo.level >= 25) {
-            word = UnityEngine.Random.Range(21, 31);
-        }
-        else if (goo.level >= 12) {
-            word = UnityEngine.Random.Range(11, 21);
-        }
-        else {
-            //default, therefore lowest
-            word = UnityEngine.Random.Range(1, 11);
-        }
+        
+        //avoid having the same word twice;
+        int num = GenerateNum(previousWord);
+        
+        word = num;
+        
         string letters = "";
         
         switch(word) {
@@ -116,7 +118,7 @@ public class Mop : MonoBehaviour {
                 letters = "vegan";
                 break;
             case 2:
-                letters = "green";
+                letters = "unplug";
                 break;
             case 3:
                 letters = "trains";
@@ -125,13 +127,13 @@ public class Mop : MonoBehaviour {
                 letters = "bicycle";
                 break;
             case 5:
-                letters = "lookup";
+                letters = "up";
                 break;
             case 6:
                 letters = "garden";
                 break;
             case 7:
-                letters = "healthy";
+                letters = "reuse";
                 break;
             case 8:
                 letters = "zerowaste";
@@ -140,7 +142,7 @@ public class Mop : MonoBehaviour {
                 letters = "recycle";
                 break;
             case 10:
-                letters = "userainwater";
+                letters = "greenenergy";
                 break;
             case 11:
                 letters = "waterfuel";
@@ -155,7 +157,7 @@ public class Mop : MonoBehaviour {
                 letters = "opendoor";
                 break;
             case 15:
-                letters = "reuse";
+                letters = "go-up";
                 break;
             case 16:
                 letters = "otheruses";
@@ -179,7 +181,7 @@ public class Mop : MonoBehaviour {
                 letters = "otheruses";
                 break;
             case 23:
-                letters = "productlife";
+                letters = "windenergy";
                 break;
             case 24:
                 letters = "thinkdifferent";
@@ -202,10 +204,41 @@ public class Mop : MonoBehaviour {
             case 30:
                 letters = "vegandiet";
                 break;
+            case 31:
+                letters = "userainwater";
+                break;
+            case 32:
+                letters = "longproductlife";
+                break;
+            case 33:
+                letters = "waterenergy";
+                break;
+            case 34:
+                letters = "reducegas";
+                break;
+            case 35:
+                letters = "nofossilfuel";
+                break;
+            case 36:
+                letters = "thinkdifferent";
+                break;
+            case 37:
+                letters = "go-up";
+                break;
+            case 38:
+                letters = "opendoor";
+                break;
+            case 39:
+                letters = "findkey";
+                break;
+            case 40:
+                letters = "outoftime";
+                break;
             default:
                 letters = "thinkdifferent";
                 break;
         }
+        previousWord = word;
         
         foreach (Char c in letters) {
             neededKeys.Add(c.ToString());
@@ -219,7 +252,7 @@ public class Mop : MonoBehaviour {
 
     void DisplayKeys() {
         displayingKeys = true;
-        //empty keys so none are left behind
+        //empty keys so no letters are left behind
         for (int i = 0; i < keys.Length; i++) {
             Image sr = keys[i].GetComponent<Image>();
             var alpha = sr.color;
@@ -263,4 +296,28 @@ public class Mop : MonoBehaviour {
         }
     }
     
+    private int GenerateNum(int previous) {
+        int num;
+        if (time < 20) {
+            if (goo.level >= 35) {
+                num = UnityEngine.Random.Range(24, 36);
+            }
+            else if (goo.level >= 17) {
+                num = UnityEngine.Random.Range(12, 24);
+            }
+            else {
+                //default, therefore lowest
+                num = UnityEngine.Random.Range(1, 12);
+            }
+        }
+        else {
+            num = UnityEngine.Random.Range(36, 40);
+        }
+
+        if (num == previous) {
+            return GenerateNum(num);
+        } else {
+            return num;
+        }
+    }
 }

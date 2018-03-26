@@ -9,7 +9,7 @@ public class AudioScript : MonoBehaviour {
     private float FadeSpeed;
     public Goo goo;
 
-    public static AudioScript instance;
+    public static AudioScript instance = null;
 
     [FMODUnity.EventRef]
     public string SoundThingy = "event:/Music" ;
@@ -19,12 +19,16 @@ public class AudioScript : MonoBehaviour {
     public float VolumeValue;
 
     void Awake() {
-        if (instance != null && instance != this) {
-            Destroy(this.gameObject);
+        if (instance == null) {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else {
+            Destroy(gameObject);
         }
 
-        instance = this;
-        DontDestroyOnLoad(this.gameObject);
+        Debug.Log(instance.gameObject.name);
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start() {
@@ -33,12 +37,11 @@ public class AudioScript : MonoBehaviour {
         Music.getParameter("EQ", out EQParameter); // new
         Music.start();
     }
-
-    //????
+    
     void Update() {
         try {
             goo = GameObject.Find("Goo").GetComponent<Goo>();
-            WaterValue = goo.level * 2.5f;
+            WaterValue = goo.level / 4;
         }
         catch (Exception e) {
             WaterValue = 1;
