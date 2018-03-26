@@ -30,7 +30,7 @@ public class Faucet : MonoBehaviour {
             stream.SetActive(false);
         }
 
-        if (isOpen && openAmount < 1) {
+        if (isOpen && openAmount < 0.8f) {
             openAmount += 0.0005f;
         }
         
