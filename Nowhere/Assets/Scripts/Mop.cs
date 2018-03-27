@@ -29,7 +29,7 @@ public class Mop : MonoBehaviour {
 
     void Update() {
         time += Time.deltaTime;
-        if (faucetManager.openFaucets.Count > 0 && !displayingKeys) {
+        if (faucetManager.openFaucets.Count > 0 && !displayingKeys && time > 20) {
             DisplayKeys();
         }
         

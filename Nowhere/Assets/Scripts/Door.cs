@@ -28,8 +28,9 @@ public class Door : MonoBehaviour {
     void OnMouseDown() {
         if (hasKey) {
             sr.sprite = Resources.Load("Door/DeurOpen", typeof(Sprite)) as Sprite;
-            transform.position -= new Vector3(1, 0, 0);
+            transform.position -= new Vector3(0.5f, 0, 0);
             Debug.Log("Door opened");
+            hasKey = false;
         } else {
             Debug.Log("Door is Locked");
         }

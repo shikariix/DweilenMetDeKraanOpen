@@ -11,6 +11,7 @@ public class Faucet : MonoBehaviour {
     private int random;
     private bool gameStarted = false;
     public GameObject stream;
+    public Animator streamAnim;
 
     public float openAmount;
 
@@ -35,21 +36,30 @@ public class Faucet : MonoBehaviour {
         }
         
         //Stream animation should be based on openAmount
-        Vector3 tempScale = stream.transform.localScale;
-        tempScale.x = openAmount;
-        stream.transform.localScale = tempScale;
+        if (openAmount < 0.33f) {
+            streamAnim.SetBool("Drip", true);
+            streamAnim.SetBool("Drip", true);
+
+        } else if (openAmount < 0.66f) {
+            streamAnim.SetBool("Drip", false);
+            streamAnim.SetBool("Moderate", true);
+        } else {
+            streamAnim.SetBool("Moderate", false);
+            streamAnim.SetBool("Heavy", true);
+        }
     }
 
     private IEnumerator CheckToOpenFaucet()
     {
         if (!gameStarted) { 
-        yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(8);
             gameStarted = true;
         }
 
         random = Random.Range(0, 1000);
-        if (random == 7 && !isOpen)
-        {
+        if (fm.openFaucets.Count < 1) {
+            OpenFaucet();
+        } else if (random == 7 && !isOpen) {
             OpenFaucet();
         }
     }

@@ -10,17 +10,17 @@ public class Goo : MonoBehaviour {
     public float level;
 
     void FixedUpdate() {
-            tempPos = transform.position;
-            tempPos.y = (level / 40) + 4.2f;
-            transform.position = tempPos;
+        tempPos = transform.position;
+        tempPos.y = (level / 40) + 4.2f;
+        transform.position = tempPos;
 
-            if (level < 4.2f) {
-                level = 4.2f;
-            }
+        if (level < 4.2f) {
+            level = 4.2f;
+        }
 
-            if (level > 70) {
-                Debug.Log("You died");
-                scene.GameOver();
-            }
+        if (level > 70) {
+            Debug.Log("You died");
+            scene.GameOver();
+        }
     }
 }
