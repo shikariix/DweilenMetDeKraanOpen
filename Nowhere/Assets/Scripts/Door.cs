@@ -8,6 +8,7 @@ public class Door : MonoBehaviour {
     private bool hasKey = false;
     private SpriteRenderer sr;
 
+    public GameObject hanginglock;
     public GameObject key;
 
     void Start() {
@@ -18,7 +19,7 @@ public class Door : MonoBehaviour {
 	void Update () {
         time += Time.deltaTime;
 
-        if (time > 2) {
+        if (time > 30) {
             //give key, display on screen
             key.SetActive(true);
             hasKey = true;
@@ -26,13 +27,15 @@ public class Door : MonoBehaviour {
 	}
 
     void OnMouseDown() {
-        if (hasKey) {
-            sr.sprite = Resources.Load("Door/DeurOpen", typeof(Sprite)) as Sprite;
-            transform.position -= new Vector3(0.5f, 0, 0);
-            Debug.Log("Door opened");
+        if (hasKey && hanginglock.activeSelf) {
+            hanginglock.SetActive(false);
+            Debug.Log("Door unlocked");
             hasKey = false;
+        } else if (hanginglock.activeSelf && !hasKey) {
+            Debug.Log("Door is locked");
         } else {
-            Debug.Log("Door is Locked");
+            sr.sprite = Resources.Load("Door/DeurOpen", typeof(Sprite)) as Sprite;
+            transform.position -= new Vector3(1f, 0, 0);
         }
     }
 }
