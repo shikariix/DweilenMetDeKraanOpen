@@ -22,7 +22,7 @@ public class Door : MonoBehaviour {
 	void Update () {
         time += Time.deltaTime;
 
-        if (time > 20) {
+        if (time > 40) {
             //give key, display on screen
             //key.SetActive(true);
             Cursor.visible = true;
@@ -38,6 +38,7 @@ public class Door : MonoBehaviour {
         if (hasKey && hanginglock.activeSelf) {
             hanginglock.SetActive(false);
             Debug.Log("Door unlocked");
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             hasKey = false;
         } else if (hanginglock.activeSelf && !hasKey) {
             Debug.Log("Door is locked");

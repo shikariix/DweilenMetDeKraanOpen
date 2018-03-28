@@ -92,7 +92,7 @@ public class Mop : MonoBehaviour {
 
     void DoMopping() {
         wordAud.Play();
-        goo.level -= 1;
+        goo.Mop();
         GenerateKeys();
     }
 
