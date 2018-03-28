@@ -7,7 +7,6 @@ public class SceneController : MonoBehaviour {
 
     public Transform canvas;
     public Transform menuCanvas;
-    public Texture2D c;
 
     public void StartGame() {
         SceneManager.LoadScene("Main");
@@ -16,10 +15,12 @@ public class SceneController : MonoBehaviour {
 
     public void GameOver() {
         SceneManager.LoadScene("GameOver");
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     public void Win() {
         SceneManager.LoadScene("Win");
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     public void ExitGame() {
@@ -33,9 +34,8 @@ public class SceneController : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             PauseGame();
-            Cursor.visible = true;
+            //Cursor.visible = true;
         }
-        Cursor.SetCursor(c, Vector2.zero, CursorMode.Auto);
     }
 
     public void PauseGame() {

@@ -30,7 +30,7 @@ public class Mop : MonoBehaviour {
 
     void Update() {
         time += Time.deltaTime;
-        if (faucetManager.openFaucets.Count > 0 && !displayingKeys && time > 20) {
+        if (faucetManager.openFaucets.Count > 0 && !displayingKeys && time > 10) {
             DisplayKeys();
         }
         
@@ -300,7 +300,7 @@ public class Mop : MonoBehaviour {
     
     private int GenerateNum(int previous) {
         int num;
-        if (time < 20) {
+        if (time < 60) {
             if (goo.level >= 35) {
                 num = UnityEngine.Random.Range(24, 36);
             }

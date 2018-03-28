@@ -11,6 +11,7 @@ public class Door : MonoBehaviour {
 
     public GameObject hanginglock;
     public GameObject key;
+    public Texture2D c;
 
     void Start() {
         sr = GetComponent<SpriteRenderer>();
@@ -21,10 +22,15 @@ public class Door : MonoBehaviour {
 	void Update () {
         time += Time.deltaTime;
 
-        if (time > 60) {
+        if (time > 20) {
             //give key, display on screen
-            key.SetActive(true);
+            //key.SetActive(true);
+            Cursor.visible = true;
+            Cursor.SetCursor(c, Vector2.zero, CursorMode.ForceSoftware);
             hasKey = true;
+        } else {
+
+            Cursor.visible = false;
         }
 	}
 
