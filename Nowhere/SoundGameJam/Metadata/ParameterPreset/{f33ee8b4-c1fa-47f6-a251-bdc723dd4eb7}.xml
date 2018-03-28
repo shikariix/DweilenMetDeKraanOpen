@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{f33ee8b4-c1fa-47f6-a251-bdc723dd4eb7}">
+        <property name="name">
+            <value>High Cut</value>
+        </property>
+        <relationship name="folder">
+            <destination>{14327845-2aca-44ae-8a6c-f03bd1c48cd3}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{d779f1b2-7837-412a-aa89-5d1a2951364f}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{d779f1b2-7837-412a-aa89-5d1a2951364f}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

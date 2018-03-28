@@ -11,6 +11,7 @@ public class Door : MonoBehaviour {
 
     public GameObject hanginglock;
     public GameObject key;
+    public Texture2D k;
     public Texture2D c;
 
     void Start() {
@@ -22,11 +23,11 @@ public class Door : MonoBehaviour {
 	void Update () {
         time += Time.deltaTime;
 
-        if (time > 40) {
+        if (time > 35) {
             //give key, display on screen
-            //key.SetActive(true);
+            key.SetActive(true);
             Cursor.visible = true;
-            Cursor.SetCursor(c, Vector2.zero, CursorMode.ForceSoftware);
+            Cursor.SetCursor(k, Vector2.zero, CursorMode.ForceSoftware);
             hasKey = true;
         } else {
 
@@ -38,7 +39,7 @@ public class Door : MonoBehaviour {
         if (hasKey && hanginglock.activeSelf) {
             hanginglock.SetActive(false);
             Debug.Log("Door unlocked");
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(c, Vector2.zero, CursorMode.Auto);
             hasKey = false;
         } else if (hanginglock.activeSelf && !hasKey) {
             Debug.Log("Door is locked");

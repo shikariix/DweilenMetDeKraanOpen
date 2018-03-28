@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{66df6c47-d09f-4edf-86cc-70011c93a360}">
+        <property name="assetPath">
+            <value>Water Stopping.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>6</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e3497d90-e589-4ed1-a58b-71da11dd8cf1}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{622726fc-20e2-49a6-94cd-47f2304d9177}">
+        <property name="assetPath">
+            <value>Boiling Mud.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>200.40779166666667</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e3497d90-e589-4ed1-a58b-71da11dd8cf1}</destination>
+        </relationship>
+    </object>
+</objects>

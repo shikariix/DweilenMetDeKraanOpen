@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{338628c9-f8c0-40cc-a436-d551b9ab7f10}">
+        <property name="name">
+            <value>Dirty water</value>
+        </property>
+        <relationship name="folder">
+            <destination>{14327845-2aca-44ae-8a6c-f03bd1c48cd3}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{3300456f-96c7-406f-a132-485788731fbd}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{3300456f-96c7-406f-a132-485788731fbd}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

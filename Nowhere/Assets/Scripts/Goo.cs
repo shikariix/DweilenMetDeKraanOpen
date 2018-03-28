@@ -12,7 +12,7 @@ public class Goo : MonoBehaviour {
 
     void FixedUpdate() {
         tempPos = Vector3.zero;
-        tempPos.y = (level / 10000);
+        tempPos.y = (level / 20000);
         Debug.Log(level);
         transform.position += tempPos;
 
@@ -28,5 +28,6 @@ public class Goo : MonoBehaviour {
 
     public void Mop() {
         transform.position -= mop;
+        level -= 1;
     }
 }

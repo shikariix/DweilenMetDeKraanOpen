@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{465d8607-7391-40a1-bdd2-aba290c740e7}">
+        <property name="assetPath">
+            <value>Door Cracking.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>4.0960000000000001</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e3497d90-e589-4ed1-a58b-71da11dd8cf1}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{cf4d8d6a-2c4e-4193-9749-47532c238dae}">
+        <property name="assetPath">
+            <value>Door Game JAm III.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.4853514739229026</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e3497d90-e589-4ed1-a58b-71da11dd8cf1}</destination>
+        </relationship>
+    </object>
+</objects>

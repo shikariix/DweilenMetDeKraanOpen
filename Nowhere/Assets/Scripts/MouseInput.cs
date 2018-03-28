@@ -10,12 +10,12 @@ public class MouseInput : MonoBehaviour {
     Vector3 mousePos;
     float add;
 
-    void Update () {
+    void FixedUpdate () {
         mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         temp = container.position;
 
         //Container can't move so far that the void is visible
-        if (container.position.y <= 8.1f && container.position.y > 2.6f ) { 
+        if (container.position.y <= 8.1f && container.position.y >= 2.6f ) { 
             //If the mouse is at the top, move container down; if the mouse is at the bottom, move container up
             if (mousePos.y > 0.9) {
                  temp.y -= 0.01f;
@@ -27,6 +27,9 @@ public class MouseInput : MonoBehaviour {
             
         } else if (container.position.y > 8.1f) {
             container.position = new Vector3(container.position.x, 8.1f, container.position.z);
+        } else if (container.position.y < 2.6f)
+        {
+            container.position = new Vector3(container.position.x, 2.6f, container.position.z);
         }
     }
 }
