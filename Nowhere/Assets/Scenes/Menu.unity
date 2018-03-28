@@ -507,7 +507,7 @@ Prefab:
     - target: {fileID: 223035611225956378, guid: db692884329a08e46949156362a8fed1,
         type: 2}
       propertyPath: m_PixelPerfect
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1215480202770578, guid: db692884329a08e46949156362a8fed1, type: 2}
       propertyPath: m_Layer
@@ -641,6 +641,12 @@ Prefab:
       propertyPath: m_fontSizeBase
       value: 85.99
       objectReference: {fileID: 0}
+    - target: {fileID: 114829971107064974, guid: db692884329a08e46949156362a8fed1,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 839931ca1cd5ad54b8c747aaa3fd64cf,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db692884329a08e46949156362a8fed1, type: 2}
   m_IsPrefabParent: 0
