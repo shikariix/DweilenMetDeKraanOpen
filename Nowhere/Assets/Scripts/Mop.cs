@@ -16,6 +16,7 @@ public class Mop : MonoBehaviour {
 
     public Animator anim;
     public AudioSource aud;
+    public AudioSource wordAud;
 
     private bool displayingKeys = false;
     private int correctKeys = 0;
@@ -90,6 +91,7 @@ public class Mop : MonoBehaviour {
     }
 
     void DoMopping() {
+        wordAud.Play();
         goo.level -= 1;
         GenerateKeys();
     }

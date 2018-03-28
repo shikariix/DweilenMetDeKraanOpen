@@ -39,7 +39,7 @@ public class SceneController : MonoBehaviour {
     }
 
     public void PauseGame() {
-        if (!canvas.gameObject.active) {
+        if (!canvas.gameObject.activeSelf) {
             canvas.gameObject.SetActive(true);
             StartCoroutine("SetTimeScale");
         }

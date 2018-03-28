@@ -7,19 +7,21 @@ public class Door : MonoBehaviour {
     private float time;
     private bool hasKey = false;
     private SpriteRenderer sr;
+    private AudioSource aud;
 
     public GameObject hanginglock;
     public GameObject key;
 
     void Start() {
         sr = GetComponent<SpriteRenderer>();
+        aud = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
 	void Update () {
         time += Time.deltaTime;
 
-        if (time > 30) {
+        if (time > 60) {
             //give key, display on screen
             key.SetActive(true);
             hasKey = true;
@@ -35,7 +37,8 @@ public class Door : MonoBehaviour {
             Debug.Log("Door is locked");
         } else {
             sr.sprite = Resources.Load("Door/DeurOpen", typeof(Sprite)) as Sprite;
-            transform.position -= new Vector3(1f, 0, 0);
+            aud.Play();
+            transform.position -= new Vector3(0.9f, 0, 0);
         }
     }
 }
