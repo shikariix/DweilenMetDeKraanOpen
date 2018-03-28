@@ -38,7 +38,6 @@ public class Faucet : MonoBehaviour {
         //Stream animation should be based on openAmount
         if (openAmount < 0.33f) {
             streamAnim.SetBool("Drip", true);
-            streamAnim.SetBool("Drip", true);
 
         } else if (openAmount < 0.66f) {
             streamAnim.SetBool("Drip", false);
