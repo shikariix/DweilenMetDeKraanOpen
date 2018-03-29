@@ -12,15 +12,14 @@ public class Goo : MonoBehaviour {
 
     void FixedUpdate() {
         tempPos = Vector3.zero;
-        tempPos.y = (level / 20000);
-        Debug.Log(level);
-        transform.position += tempPos;
+        tempPos.y = level;
+        transform.position += (tempPos.normalized / 1000);
 
-        if (level < 4.2f) {
-            level = 4.2f;
+        if (transform.position.y < -3.7f) {
+            transform.position = new Vector3(0, -3.7f, -2);
         }
 
-        if (level > 70) {
+        if (level > 100) {
             Debug.Log("You died");
             scene.GameOver();
         }
@@ -28,6 +27,6 @@ public class Goo : MonoBehaviour {
 
     public void Mop() {
         transform.position -= mop;
-        level -= 1;
+        level = level * 0.95f;
     }
 }

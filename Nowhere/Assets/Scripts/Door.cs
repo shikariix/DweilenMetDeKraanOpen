@@ -27,8 +27,12 @@ public class Door : MonoBehaviour {
             //give key, display on screen
             key.SetActive(true);
             Cursor.visible = true;
-            Cursor.SetCursor(k, Vector2.zero, CursorMode.ForceSoftware);
             hasKey = true;
+            if (hasKey) { 
+                Cursor.SetCursor(k, Vector2.zero, CursorMode.ForceSoftware);
+            } else {
+                Cursor.SetCursor(c, Vector2.zero, CursorMode.ForceSoftware);
+            }
         } else {
 
             Cursor.visible = false;

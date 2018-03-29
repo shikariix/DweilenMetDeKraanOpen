@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{d1436c68-64d5-4dd3-b0cb-596c2f9a56ce}">
         <property name="name">
-            <value>Music</value>
+            <value>Music Old 2</value>
         </property>
         <property name="outputFormat">
             <value>1</value>
@@ -39,9 +39,6 @@
         <relationship name="parameters">
             <destination>{ee9d9af8-7415-410b-b9ba-f08051ea27c2}</destination>
             <destination>{74672ac8-e207-43bd-bd09-6bde9777fa18}</destination>
-        </relationship>
-        <relationship name="banks">
-            <destination>{83649537-3a30-4b92-a0d4-b95dc95045e1}</destination>
         </relationship>
     </object>
     <object class="EventMixer" id="{c7dd4228-e02f-4b93-84bc-82f2bc10661c}">
@@ -730,7 +727,7 @@
             <value>2.0153846153846153</value>
         </property>
         <property name="value">
-            <value>-6.5</value>
+            <value>-9.01537895</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{b54bfa76-2f9c-4030-9a16-15e29ca98599}">

@@ -9,19 +9,23 @@ public class SceneController : MonoBehaviour {
     public Transform menuCanvas;
     public Texture2D c;
 
+    private Texture2D cur;
+    private bool isVisible;
+
     public void StartGame() {
         SceneManager.LoadScene("Main");
     }
 
-    public void GameOver()
-    {
-        Cursor.visible = false;
+    public void GameOver() {
+        cur = c;
+        isVisible = true;
         SceneManager.LoadScene("GameOver");
     }
 
     public void Win()
     {
-        Cursor.visible = false;
+        cur = c;
+        isVisible = true;
         SceneManager.LoadScene("Win");
     }
 
@@ -31,8 +35,8 @@ public class SceneController : MonoBehaviour {
 
     public void MainMenu()
     {
-        Cursor.visible = true;
-        Cursor.SetCursor(c, Vector2.zero, CursorMode.Auto);
+        isVisible = true;
+        cur = c;
         SceneManager.LoadScene("Menu");
     }
 
@@ -41,18 +45,20 @@ public class SceneController : MonoBehaviour {
             PauseGame();
             //Cursor.visible = true;
         }
+        Cursor.visible = isVisible;
+        Cursor.SetCursor(cur, Vector2.zero, CursorMode.Auto);
     }
 
     public void PauseGame() {
         if (!canvas.gameObject.activeSelf)
         {
-            Cursor.visible = true;
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            isVisible = true;
+            cur = null;
             canvas.gameObject.SetActive(true);
             StartCoroutine("SetTimeScale");
         }
         else {
-            Cursor.visible = false;
+            isVisible = false;
             canvas.gameObject.SetActive(false);
             Time.timeScale = 1;
         }

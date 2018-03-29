@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{4aa3dbf4-db07-4867-a17a-19ceeb542f41}">
         <property name="name">
-            <value>Music II</value>
+            <value>Music Old</value>
         </property>
         <property name="outputFormat">
             <value>1</value>
@@ -160,6 +160,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{6a858298-d181-40fa-9dab-f37a856230d1}">
+        <property name="volume">
+            <value>10</value>
+        </property>
         <relationship name="effectChain">
             <destination>{0134496b-f1fb-4bc7-af93-2f4bb4bcc349}</destination>
         </relationship>

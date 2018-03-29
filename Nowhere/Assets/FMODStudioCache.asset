@@ -13,18 +13,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114540662770964260}
-  - {fileID: 114591764116586310}
-  - {fileID: 114603428341156506}
+  - {fileID: 114238679131402878}
+  - {fileID: 114959959131646250}
   EditorEvents:
   - {fileID: 114351004853512016}
   - {fileID: 114760246396357010}
   - {fileID: 114747384417558112}
   - {fileID: 114517730072656112}
-  - {fileID: 114124099676049062}
-  MasterBankRef: {fileID: 114591764116586310}
+  - {fileID: 114344813905506556}
+  MasterBankRef: {fileID: 114238679131402878}
   StringsBankRef: {fileID: 114540662770964260}
-  stringsBankWriteTime: 636570961580000000
+  stringsBankWriteTime: 636578695740000000
   cacheVersion: 2
+--- !u!114 &114076163190487276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Dirtywater
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114124099676049062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,16 +54,46 @@ MonoBehaviour:
   Path: event:/Music II
   guid: f4dba34a07db6748a17a19ceeb542f41
   Banks:
-  - {fileID: 114591764116586310}
+  - {fileID: 114238679131402878}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114423089636755308}
-  - {fileID: 114769993914459586}
+  - {fileID: 114133361375563142}
+  - {fileID: 114431044764648554}
   MinDistance: 0
   MaxDistance: 0
   Length: 62439
+--- !u!114 &114133361375563142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: High Cut
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114178754719888202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volumes
+  Min: 0
+  Max: 6
+  Default: 0
 --- !u!114 &114183726867371478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +108,21 @@ MonoBehaviour:
   Name: Volumes
   Min: 0
   Max: 6
+  Default: 0
+--- !u!114 &114194754526948118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: High Cut
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114213702323512672
 MonoBehaviour:
@@ -94,6 +154,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114235980994284740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volumes
+  Min: 0
+  Max: 6
+  Default: 0
 --- !u!114 &114237175775807030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +188,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 4760544
   Exists: 1
+--- !u!114 &114238679131402878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documenten\Unity\Nowhere\SoundGameJam\Build\Desktop\Master Bank.bank
+  lastModified: 636578695740000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 14565952
+  Exists: 1
 --- !u!114 &114272430476045066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +221,30 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114344813905506556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music Old
+  guid: f4dba34a07db6748a17a19ceeb542f41
+  Banks:
+  - {fileID: 114238679131402878}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114627803333976808}
+  - {fileID: 114178754719888202}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 62439
 --- !u!114 &114351004853512016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,18 +257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/Music
-  guid: 686c43d1d564d34db0cb596c2f9a56ce
+  guid: f08e61ac4549c843bdbf205a4d743540
   Banks:
-  - {fileID: 114591764116586310}
+  - {fileID: 114238679131402878}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114896744522947762}
-  - {fileID: 114682860938042510}
+  - {fileID: 114761988567739516}
+  - {fileID: 114857495894020284}
   MinDistance: 0
   MaxDistance: 0
-  Length: 64000
+  Length: 104090
 --- !u!114 &114423089636755308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +283,21 @@ MonoBehaviour:
   Name: High Cut
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114431044764648554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volumes
+  Min: 0
+  Max: 6
   Default: 0
 --- !u!114 &114467593213059150
 MonoBehaviour:
@@ -199,17 +331,17 @@ MonoBehaviour:
   Path: event:/Water
   guid: adb32b10a8221e4aa3a6279443adf803
   Banks:
-  - {fileID: 114591764116586310}
+  - {fileID: 114238679131402878}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114224170887486986}
-  - {fileID: 114608770916603842}
-  - {fileID: 114272430476045066}
+  - {fileID: 114820221427120860}
+  - {fileID: 114593379706405408}
+  - {fileID: 114076163190487276}
   MinDistance: 0
   MaxDistance: 0
-  Length: 24011
+  Length: 18000
 --- !u!114 &114540601482640852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,12 +372,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: SoundGameJam\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636570961580000000
+  lastModified: 636578695740000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 968
   Exists: 1
+--- !u!114 &114556210393923896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Dirty water
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114591764116586310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +412,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 15887648
   Exists: 1
+--- !u!114 &114593379706405408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water On/off
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114603428341156506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +495,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 4760544
   Exists: 1
+--- !u!114 &114627803333976808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: High Cut
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114673955445586726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +554,7 @@ MonoBehaviour:
   Path: event:/Effects/Door Cracking
   guid: 8e39ffade7e6e045b6fde7a8aeef3b06
   Banks:
-  - {fileID: 114591764116586310}
+  - {fileID: 114238679131402878}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -399,7 +576,7 @@ MonoBehaviour:
   Path: event:/Effects/Drops
   guid: 638119d41f53bf4ba53c0dc3c9d4da2e
   Banks:
-  - {fileID: 114591764116586310}
+  - {fileID: 114238679131402878}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -407,6 +584,21 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16000
+--- !u!114 &114761988567739516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: High Cut
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114769993914459586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +613,21 @@ MonoBehaviour:
   Name: Volumes
   Min: 0
   Max: 6
+  Default: 0
+--- !u!114 &114820221427120860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: High Cut
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114822554517673266
 MonoBehaviour:
@@ -438,6 +645,36 @@ MonoBehaviour:
   Max: 6
   Default: 0
 --- !u!114 &114835114283571864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volumes
+  Min: 0
+  Max: 6
+  Default: 0
+--- !u!114 &114838968774298168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: High Cut
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114857495894020284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -485,6 +722,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 4760544
   Exists: 1
+--- !u!114 &114894784885157426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water On/off
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114896744522947762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +770,24 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 4760544
+  Exists: 1
+--- !u!114 &114959959131646250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Documenten\Unity\Nowhere\SoundGameJam\Build\Desktop\Main Bank For Water.bank
+  lastModified: 636578695740000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 450
   Exists: 1
 --- !u!114 &114995134236520424
 MonoBehaviour:
